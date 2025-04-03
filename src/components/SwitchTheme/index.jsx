@@ -7,7 +7,6 @@ import "./index.scss"
 export default function SwitchTheme() {
   const { theme, toggleTheme } = useContext(ThemeContext)
   const { language } = useContext(LanguageContext)
-  console.log(theme)
 
   return (
     <button

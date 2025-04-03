@@ -1,3 +1,20 @@
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -16,6 +33,19 @@
       color: var(--color-light);
     }
   }
+  .banner {
+    &__middle {
+      &__profilePicture {
+        &__picture {
+          border: 2px solid #dcbc9f;
+        }
+      }
+      &__contactBtn {
+        background: var(--button-light);
+        color: var(--color-light);
+      }
+    }
+  }
 }
 
 [data-theme="dark"] {
@@ -25,6 +55,19 @@
   .switchTheme {
     i {
       color: var(--color-dark);
+    }
+  }
+  .banner {
+    &__middle {
+      &__profilePicture {
+        &__picture {
+          border: 2px solid #614a39;
+        }
+      }
+      &__contactBtn {
+        background: var(--button-dark);
+        color: var(--color-dark);
+      }
     }
   }
 }
