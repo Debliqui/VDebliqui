@@ -1,0 +1,23 @@
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+.switchLanguage {
+  border-radius: 8px;
+  padding: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--title-font);
+  cursor: pointer;
+  @include screen_mobile {
+    font-size: 18px;
+  }
+  option {
+    font-size: 12px;
+    @include screen_mobile {
+      font-size: 15px;
+    }
+  }
+}
