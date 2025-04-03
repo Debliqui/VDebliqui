@@ -46,6 +46,9 @@
       }
     }
   }
+  .linkedinBtn {
+    color: var(--color-light);
+  }
 }
 
 [data-theme="dark"] {
@@ -69,5 +72,8 @@
         color: var(--color-dark);
       }
     }
+  }
+  .linkedinBtn {
+    color: var(--color-dark);
   }
 }

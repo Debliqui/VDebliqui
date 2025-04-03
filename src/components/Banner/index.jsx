@@ -7,6 +7,7 @@ import BgDark from "../../assets/background-dark.webp"
 import BgLight from "../../assets/background-light.webp"
 import ProfilePicture from "../../assets/profile-picture.webp"
 import "./index.scss"
+import LinkButton from "../LinkedinButton"
 
 export default function Banner() {
   const { theme } = useContext(ThemeContext)
@@ -21,12 +22,13 @@ export default function Banner() {
           <h1 className="banner__header__title" itemProp="name">
             {traduction[language].title}
           </h1>
-          <p className="banner__header__job" itemProp="jobTitle">
+          <h2 className="banner__header__job" itemh2rop="jobTitle">
             {traduction[language].job}
-          </p>
+          </h2>
           <p className="banner__header__location" itemProp="address">
             {traduction[language].location}
           </p>
+          <LinkButton title="Linkedin" statu={traduction[language].statu} />
         </header>
         <div className="banner__middle">
           <div
