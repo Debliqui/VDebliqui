@@ -1,0 +1,37 @@
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 16px;
+  &__title {
+    font-family: var(--title-font);
+    font-size: 16px;
+    font-weight: bold;
+    @include screen_tiny {
+      font-size: 18px;
+    }
+    @include screen_mobile {
+      font-size: 20px;
+    }
+    @include screen_tablet {
+      font-size: 22px;
+    }
+  }
+}

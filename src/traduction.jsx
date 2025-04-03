@@ -5,7 +5,18 @@ const traduction = {
     location: "Montréal, Québec, Canada",
     statu: "En recherche",
     section: {
-      about: "À PROPOS",
+      about: {
+        title: "À PROPOS",
+        catchphrase:
+          "Développeur front-end junior, je suis spécialisé dans l’intégration Web",
+        listSpecialties: [
+          "Page dynamique,",
+          "Page statique,",
+          "Utilisation d’API Rest,",
+          "Déboguer et optimiser un site web existant,",
+          "Gestion d'état pour applications web.",
+        ],
+      },
       project: "MES PROJETS",
       skils: "COMPÉTENCE",
     },
@@ -16,9 +27,20 @@ const traduction = {
     location: "Montreal, Quebec, Canada",
     statu: "Open to work",
     section: {
-      about: "ABOUT",
+      about: {
+        title: "ABOUT",
+        catchphrase:
+          "Junior front-end developer specializing in Web integration",
+        listSpecialties: [
+          "Dynamic pages,",
+          "Static pages,",
+          "Using Rest APIs,",
+          "Debugging and optimizing an existing website,",
+          "State management for web applications.",
+        ],
+      },
       project: "MY PROJECTS",
-      skils: "SKILS",
+      skils: "SKILLS",
     },
   },
 }
