@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import LanguageContext from "../../context/LanguageContext"
 
+import "./index.scss"
+
 export default function SwitchLang() {
   const { SwitchLanguage, langage } = useContext(LanguageContext)
   return (
@@ -11,7 +13,8 @@ export default function SwitchLang() {
       onChange={(event) => {
         SwitchLanguage(event.target.value)
       }}
-      aria-label={langage ? "Sélectionner la langue" : "Select language"}
+      aria-label={langage ? "Select language" : "Sélectionner la langue"}
+      className="switchLanguage"
     >
       <option value="fr" aria-label="Français">
         FR

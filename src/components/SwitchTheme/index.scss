@@ -1,7 +1,15 @@
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
 .switchTheme {
   background-color: transparent;
-  &__icon {
-    width: 15px;
-    height: 15px;
+  i {
+    font-size: 15px;
+    @include screen_mobile {
+      font-size: 18px;
+    }
   }
 }

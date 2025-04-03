@@ -2,8 +2,6 @@ import { useContext } from "react"
 import ThemeContext from "../../context/ThemeContext"
 import LanguageContext from "../../context/LanguageContext"
 
-import Sun from "../../assets/sun.svg"
-import Moon from "../../assets/moon.svg"
 import "./index.scss"
 
 export default function SwitchTheme() {
@@ -18,17 +16,9 @@ export default function SwitchTheme() {
       className="switchTheme"
     >
       {theme === "dark" ? (
-        <img
-          src={Moon}
-          alt={language ? "Icône de la lune" : "Moon icon"}
-          className="switchTheme__icon"
-        />
+        <i className="fa-solid fa-moon" />
       ) : (
-        <img
-          src={Sun}
-          alt={language ? "Icône du soleil" : "Sun icon"}
-          className="switchTheme__icon"
-        />
+        <i className="fa-solid fa-sun" />
       )}
     </button>
   )

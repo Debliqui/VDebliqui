@@ -2,19 +2,23 @@ import { useContext } from "react"
 import LanguageContext from "./context/LanguageContext"
 import traduction from "./traduction"
 
+import Header from "./container/Header"
+
 import "./App.scss"
-import SwitchLang from "./components/SwitchLang"
 import ThemeContextProvider from "./context/ThemeContextProvider"
-import SwitchTheme from "./components/SwitchTheme"
 
 function App() {
   const { language } = useContext(LanguageContext)
   return (
     <ThemeContextProvider>
-      <SwitchLang />
-      <SwitchTheme />
-      <h1>{traduction[language].title}</h1>
-      <p>{traduction[language].statu}</p>
+      <Header />
+      <main
+        className="main-content"
+        aria-label={language ? "Contenu principal" : "Main content"}
+      >
+        <h1>{traduction[language].title}</h1>
+        <p>{traduction[language].statu}</p>
+      </main>
     </ThemeContextProvider>
   )
 }

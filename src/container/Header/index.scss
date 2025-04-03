@@ -1,0 +1,16 @@
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 16px;
+  @include screen_mobile {
+    gap: 6px;
+  }
+}
