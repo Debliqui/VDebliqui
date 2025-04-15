@@ -1,0 +1,147 @@
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+.banner {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 16px;
+  @include screen_mobile {
+    margin: 0 20px;
+  }
+  @include screen_tablet() {
+    margin: 0 24px;
+  }
+  &__header {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    &__title {
+      font-family: var(--title-font);
+      font-size: 18px;
+      font-weight: 600;
+      @include screen_tiny {
+        font-size: 20px;
+      }
+      @include screen_mobile {
+        font-size: 22px;
+      }
+      @include screen_tablet {
+        font-size: 24px;
+      }
+    }
+    &__job {
+      font-family: var(--body-font);
+      font-size: 14px;
+      @include screen_tiny {
+        font-size: 16px;
+      }
+      @include screen_mobile {
+        font-size: 18px;
+      }
+      @include screen_tablet {
+        font-size: 20px;
+      }
+    }
+    &__location {
+      font-family: var(--body-font);
+      font-size: 12px;
+      font-weight: 300;
+      @include screen_tiny {
+        font-size: 14px;
+      }
+      @include screen_mobile {
+        font-size: 16px;
+      }
+      @include screen_tablet {
+        font-size: 18px;
+      }
+    }
+  }
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -38px;
+    z-index: 1;
+    @include screen_tiny {
+      margin-top: -55px;
+    }
+    @include screen_mobile {
+      margin-top: -70px;
+    }
+    &__profilePicture {
+      width: 76px;
+      height: 76px;
+      @include screen_tiny {
+        width: 110px;
+        height: 110px;
+      }
+      @include screen_mobile {
+        width: 140px;
+        height: 140px;
+      }
+      &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    &__contactBtn {
+      padding: 4px 6px;
+      font-family: var(--title-font);
+      font-size: 12px;
+      font-weight: 600;
+      height: 100%;
+      @include screen_tiny {
+        font-size: 14px;
+      }
+      @include screen_mobile {
+        font-size: 16px;
+        padding: 6px 8px;
+      }
+      @include screen_tablet {
+        font-size: 18px;
+        padding: 8px 10px;
+      }
+    }
+  }
+  &__backgroundImg {
+    display: flex;
+    height: 105px;
+    border-radius: 8px;
+    margin: 0 -16px;
+    @include screen_tiny {
+      height: 150px;
+    }
+    @include screen_mobile {
+      height: 200px;
+      margin: 0 -20px;
+    }
+    @include screen_tablet {
+      height: 300px;
+      margin: 0 -24px;
+    }
+    &__src {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
