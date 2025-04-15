@@ -150,6 +150,9 @@ table {
   --section-light: #ebdaca;
   --section-dark: #3e3128;
 
+  --border-light: #e4cdb7;
+  --border-dark: #4d3c2f;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -169,6 +172,9 @@ table {
   button {
     background-color: var(--button-dark);
   }
+  button:hover {
+    border-color: var(--border-dark);
+  }
 }
 
 /* Light mode styles */
@@ -180,9 +186,11 @@ table {
   button {
     background-color: var(--button-light);
   }
+  button:hover {
+    border-color: var(--border-light);
+  }
 }
 
-/* Theme switch styles */
 [data-theme="light"] {
   color: var(--color-light);
   background-color: var(--background-light);
@@ -192,6 +200,10 @@ table {
   color: var(--color-light);
 }
 
+[data-theme="light"] button:hover {
+  border-color: var(--border-light);
+}
+
 [data-theme="dark"] {
   color: var(--color-dark);
   background-color: var(--background-dark);
@@ -199,6 +211,10 @@ table {
 
 [data-theme="dark"] .fa-solid {
   color: var(--color-dark);
+}
+
+[data-theme="dark"] button:hover {
+  border-color: var(--border-dark);
 }
 
 /* Global styles */
@@ -211,16 +227,13 @@ body {
 button {
   border-radius: 20px;
   border: 1px solid transparent;
-  padding: 3px 5px;
   font-size: 10px;
   font-weight: 500;
   font-family: var(--title-font);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -243,13 +256,40 @@ button:focus-visible {
 /* Switch theme style */
 .switchTheme {
   background-color: transparent;
+  padding: 4px;
+  min-width: 30px;
 }
 .switchTheme i {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
+  .switchTheme {
+    min-width: 32px;
+  }
   .switchTheme i {
-    font-size: 18px;
+    font-size: 22px;
+  }
+}
+
+/* Switch language style */
+.switchLanguage {
+  border-radius: 8px;
+  padding: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--title-font);
+  cursor: pointer;
+}
+.switchLanguage option {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .switchLanguage {
+    font-size: 16px;
+  }
+  .switchLanguage option {
+    font-size: 14px;
   }
 }
