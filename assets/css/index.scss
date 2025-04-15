@@ -1,0 +1,398 @@
+@use "banner";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+// HTML5 display-role reset for older browsers
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Screen
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Root style
+:root {
+  --title-font: "Anek Malayalam", sans-serif;
+  --body-font: "Chakra Petch", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+
+  --color-light: #181207;
+  --color-dark: #f8f2e7;
+
+  --background-light: #fefdfc;
+  --background-dark: #12110f;
+
+  --button-light: #cea37e;
+  --button-dark: #7c5f46;
+
+  --main-light: #f6eee7;
+  --main-dark: #28211d;
+
+  --section-light: #ebdaca;
+  --section-dark: #3e3128;
+
+  --border-light: #e4cdb7;
+  --border-dark: #4d3c2f;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+  color: var(--color-dark);
+  background-color: var(--background-dark);
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--color-dark);
+    background-color: var(--background-dark);
+  }
+
+  button {
+    background-color: var(--button-dark);
+
+    &:hover {
+      border-color: var(--border-dark);
+    }
+  }
+}
+
+// Light mode styles
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-light);
+    background-color: var(--background-light);
+  }
+
+  button {
+    background-color: var(--button-light);
+
+    &:hover {
+      border-color: var(--border-light);
+    }
+  }
+}
+
+[data-theme="light"] {
+  color: var(--color-light);
+  background-color: var(--background-light);
+
+  .fa-solid {
+    color: var(--color-light);
+  }
+
+  button:hover {
+    border-color: var(--border-light);
+  }
+
+  .main-content {
+    background-color: var(--main-light);
+  }
+
+  .banner__middle__profilePicture__picture {
+    border: 2px solid #dcbc9f;
+  }
+  .linkedinBtn {
+    color: var(--color-light);
+  }
+}
+
+[data-theme="dark"] {
+  color: var(--color-dark);
+  background-color: var(--background-dark);
+
+  .fa-solid {
+    color: var(--color-dark);
+  }
+
+  button:hover {
+    border-color: var(--border-dark);
+  }
+
+  .main-content {
+    background-color: var(--main-dark);
+  }
+
+  .banner__middle__profilePicture__picture {
+    border: 2px solid #614a39;
+  }
+  .linkedinBtn {
+    color: var(--color-dark);
+  }
+}
+
+// Global styles
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+button {
+  border-radius: 20px;
+  border: 1px solid transparent;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--title-font);
+  cursor: pointer;
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+.main-content {
+  border-radius: 8px;
+}
+
+// Main header style
+.main-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    gap: 6px;
+  }
+}
+
+// Switch theme style
+.switchTheme {
+  background-color: transparent;
+  padding: 4px;
+  min-width: 30px;
+
+  i {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 32px;
+
+    i {
+      font-size: 22px;
+    }
+  }
+}
+
+// Switch language style
+.switchLanguage {
+  border-radius: 8px;
+  padding: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--title-font);
+  cursor: pointer;
+
+  option {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+
+    option {
+      font-size: 14px;
+    }
+  }
+}
+
+// Linkendin button style
+.linkedinBtn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  i {
+    font-size: 20px;
+    @include screen_tiny {
+      font-size: 22px;
+    }
+    @include screen_mobile {
+      font-size: 24px;
+    }
+    @include screen_tablet {
+      font-size: 26px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-family: var(--title-font);
+      font-size: 14px;
+      @include screen_tiny {
+        font-size: 16px;
+      }
+      @include screen_mobile {
+        font-size: 18px;
+      }
+      @include screen_tablet {
+        font-size: 20px;
+      }
+    }
+    &__statu {
+      font-family: var(--body-font);
+      font-size: 14px;
+      font-weight: 300;
+      @include screen_tiny {
+        font-size: 16px;
+      }
+      @include screen_mobile {
+        font-size: 18px;
+      }
+      @include screen_tablet {
+        font-size: 20px;
+      }
+    }
+  }
+}

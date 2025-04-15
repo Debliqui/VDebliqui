@@ -1,8 +1,180 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+.banner {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner {
+    margin: 0 24px;
+  }
+}
+.banner__header {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.banner__header__title {
+  font-family: var(--title-font);
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (min-width: 400px) {
+  .banner__header__title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__header__title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__header__title {
+    font-size: 24px;
+  }
+}
+.banner__header__job {
+  font-family: var(--body-font);
+  font-size: 14px;
+}
+@media screen and (min-width: 400px) {
+  .banner__header__job {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__header__job {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__header__job {
+    font-size: 20px;
+  }
+}
+.banner__header__location {
+  font-family: var(--body-font);
+  font-size: 12px;
+  font-weight: 300;
+}
+@media screen and (min-width: 400px) {
+  .banner__header__location {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__header__location {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__header__location {
+    font-size: 18px;
+  }
+}
+.banner__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -38px;
+  z-index: 1;
+}
+@media screen and (min-width: 400px) {
+  .banner__middle {
+    margin-top: -55px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__middle {
+    margin-top: -70px;
+  }
+}
+.banner__middle__profilePicture {
+  width: 76px;
+  height: 76px;
+}
+@media screen and (min-width: 400px) {
+  .banner__middle__profilePicture {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__middle__profilePicture {
+    width: 140px;
+    height: 140px;
+  }
+}
+.banner__middle__profilePicture__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.banner__middle__contactBtn {
+  padding: 4px 6px;
+  font-family: var(--title-font);
+  font-size: 12px;
+  font-weight: 600;
+  height: 100%;
+}
+@media screen and (min-width: 400px) {
+  .banner__middle__contactBtn {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__middle__contactBtn {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__middle__contactBtn {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+}
+.banner__backgroundImg {
+  display: flex;
+  height: 105px;
+  border-radius: 8px;
+  margin: 0 -16px;
+}
+@media screen and (min-width: 400px) {
+  .banner__backgroundImg {
+    height: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__backgroundImg {
+    height: 200px;
+    margin: 0 -20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .banner__backgroundImg {
+    height: 300px;
+    margin: 0 -24px;
+  }
+}
+.banner__backgroundImg__src {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
 html,
 body,
 div,
@@ -91,7 +263,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -105,65 +277,58 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
+blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Root style */
 :root {
   --title-font: "Anek Malayalam", sans-serif;
   --body-font: "Chakra Petch", sans-serif;
   line-height: 1.5;
   font-weight: 300;
-
   --color-light: #181207;
   --color-dark: #f8f2e7;
-
   --background-light: #fefdfc;
   --background-dark: #12110f;
-
   --button-light: #cea37e;
   --button-dark: #7c5f46;
-
   --main-light: #f6eee7;
   --main-dark: #28211d;
-
   --section-light: #ebdaca;
   --section-dark: #3e3128;
-
   --border-light: #e4cdb7;
   --border-dark: #4d3c2f;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   color-scheme: light dark;
   color: var(--color-dark);
   background-color: var(--background-dark);
 }
 
-/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   :root {
     color: var(--color-dark);
@@ -176,8 +341,6 @@ table {
     border-color: var(--border-dark);
   }
 }
-
-/* Light mode styles */
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--color-light);
@@ -190,34 +353,46 @@ table {
     border-color: var(--border-light);
   }
 }
-
-[data-theme="light"] {
+[data-theme=light] {
   color: var(--color-light);
   background-color: var(--background-light);
 }
-
-[data-theme="light"] .fa-solid {
+[data-theme=light] .fa-solid {
+  color: var(--color-light);
+}
+[data-theme=light] button:hover {
+  border-color: var(--border-light);
+}
+[data-theme=light] .main-content {
+  background-color: var(--main-light);
+}
+[data-theme=light] .banner__middle__profilePicture__picture {
+  border: 2px solid #dcbc9f;
+}
+[data-theme=light] .linkedinBtn {
   color: var(--color-light);
 }
 
-[data-theme="light"] button:hover {
-  border-color: var(--border-light);
-}
-
-[data-theme="dark"] {
+[data-theme=dark] {
   color: var(--color-dark);
   background-color: var(--background-dark);
 }
-
-[data-theme="dark"] .fa-solid {
+[data-theme=dark] .fa-solid {
+  color: var(--color-dark);
+}
+[data-theme=dark] button:hover {
+  border-color: var(--border-dark);
+}
+[data-theme=dark] .main-content {
+  background-color: var(--main-dark);
+}
+[data-theme=dark] .banner__middle__profilePicture__picture {
+  border: 2px solid #614a39;
+}
+[data-theme=dark] .linkedinBtn {
   color: var(--color-dark);
 }
 
-[data-theme="dark"] button:hover {
-  border-color: var(--border-dark);
-}
-
-/* Global styles */
 body {
   max-width: 1280px;
   margin: 0 auto;
@@ -231,15 +406,15 @@ button {
   font-weight: 500;
   font-family: var(--title-font);
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-
-button:focus,
-button:focus-visible {
+button:focus, button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Main header style */
+.main-content {
+  border-radius: 8px;
+}
+
 .main-header {
   display: flex;
   justify-content: end;
@@ -253,7 +428,6 @@ button:focus-visible {
   }
 }
 
-/* Switch theme style */
 .switchTheme {
   background-color: transparent;
   padding: 4px;
@@ -262,7 +436,6 @@ button:focus-visible {
 .switchTheme i {
   font-size: 20px;
 }
-
 @media screen and (min-width: 768px) {
   .switchTheme {
     min-width: 32px;
@@ -272,7 +445,6 @@ button:focus-visible {
   }
 }
 
-/* Switch language style */
 .switchLanguage {
   border-radius: 8px;
   padding: 2px;
@@ -284,12 +456,79 @@ button:focus-visible {
 .switchLanguage option {
   font-size: 12px;
 }
-
 @media screen and (min-width: 768px) {
   .switchLanguage {
     font-size: 16px;
   }
   .switchLanguage option {
     font-size: 14px;
+  }
+}
+
+.linkedinBtn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.linkedinBtn i {
+  font-size: 20px;
+}
+@media screen and (min-width: 400px) {
+  .linkedinBtn i {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .linkedinBtn i {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .linkedinBtn i {
+    font-size: 26px;
+  }
+}
+.linkedinBtn__content {
+  display: flex;
+  flex-direction: column;
+}
+.linkedinBtn__content__title {
+  font-family: var(--title-font);
+  font-size: 14px;
+}
+@media screen and (min-width: 400px) {
+  .linkedinBtn__content__title {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .linkedinBtn__content__title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .linkedinBtn__content__title {
+    font-size: 20px;
+  }
+}
+.linkedinBtn__content__statu {
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: 300;
+}
+@media screen and (min-width: 400px) {
+  .linkedinBtn__content__statu {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .linkedinBtn__content__statu {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .linkedinBtn__content__statu {
+    font-size: 20px;
   }
 }
