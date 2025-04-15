@@ -47,9 +47,21 @@
       }
     </script>
     <script type="module" src="./assets/js/theme.js" defer></script>
+    <script type="module" src="./assets/js/language.js" defer></script>
   </head>
   <body>
     <header class="main-header" aria-label="Réglages du thème et de la langue">
+      <select
+        name="language"
+        role="menu"
+        id="language-selecte"
+        class="switchLanguage"
+        aria-label="Sélectionner la langue"
+        data-switch-lang
+      >
+        <option value="fr" aria-label="Français">FR</option>
+        <option value="en" aria-label="English">EN</option>
+      </select>
       <button
         data-theme-toggle
         aria-label="Changer de thème"
