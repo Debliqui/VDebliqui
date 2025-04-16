@@ -1,4 +1,5 @@
 @use "banner";
+@use "section";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -241,6 +242,9 @@ table {
   .linkedinBtn {
     color: var(--color-light);
   }
+  .about {
+    background-color: var(--section-light);
+  }
 }
 
 [data-theme="dark"] {
@@ -264,6 +268,9 @@ table {
   }
   .linkedinBtn {
     color: var(--color-dark);
+  }
+  .about {
+    background-color: var(--section-dark);
   }
 }
 
@@ -290,6 +297,12 @@ button {
 
 .main-content {
   border-radius: 8px;
+}
+
+.separator {
+  display: block;
+  width: 100px;
+  border: 1.5px solid black;
 }
 
 // Main header style

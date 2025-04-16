@@ -1,4 +1,4 @@
-import traduction from "../traduction.js"
+import traduction from "../data/traduction.js"
 
 const defaultLang = document.documentElement.lang
 const switchBtnLang = document.querySelector("[data-switch-lang]")
@@ -30,10 +30,10 @@ function updateContent(lang) {
   document.querySelector("[data-statu]").textContent = content.statu
   document.querySelector("[data-subscribe]").textContent = content.subscribe
 
-  // const aboutSection = content.section.about
-  // document.querySelector("[data-about-title]").textContent = aboutSection.title
-  // document.querySelector("[data-about-catchphrase]").textContent =
-  //   aboutSection.catchphrase
+  const aboutSection = content.section.about
+  document.querySelector("[data-about-title]").textContent = aboutSection.title
+  document.querySelector("[data-about-catchphrase]").textContent =
+    aboutSection.catchphrase
 
   const specialtiesList = document.querySelector("[data-about-specialties]")
   if (specialtiesList) {
