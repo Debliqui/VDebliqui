@@ -1,0 +1,118 @@
+// Screen
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+.project-card {
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  @include screen_tiny {
+    max-width: 400px;
+  }
+  @include screen_mobile {
+    max-width: 100%;
+  }
+}
+
+.card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 230px;
+  @include screen_tiny {
+    height: 280px;
+  }
+  @include screen_mobile {
+    height: 300px;
+  }
+  @include screen_tablet {
+    height: 340px;
+    max-width: 500px;
+  }
+  &__content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 8px;
+    &__name {
+      font-family: var(--title-font);
+      font-size: 16px;
+      font-weight: 600;
+      padding-bottom: 4px;
+      @include screen_mobile {
+        font-size: 18px;
+      }
+      @include screen_tablet {
+        font-size: 20px;
+      }
+    }
+    &__objectif {
+      font-family: var(--body-font);
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 4px;
+      @include screen_mobile {
+        font-size: 16px;
+      }
+      @include screen_tablet {
+        font-size: 18px;
+      }
+      & span {
+        font-weight: 600;
+      }
+    }
+    &__language {
+      display: flex;
+      gap: 8px;
+      &__tag {
+        font-family: var(--body-font);
+        font-size: 12px;
+        font-weight: 400;
+        padding: 8px;
+        border-radius: 20px;
+        @include screen_mobile {
+          font-size: 14px;
+        }
+        @include screen_tablet {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__img-container {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+    &__picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+}
+// Github link style
+.github-link {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 26px;
+  @include screen_tablet {
+    font-size: 30px;
+  }
+}
