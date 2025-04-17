@@ -1,11 +1,10 @@
-@use "banner";
-@use "section";
-
+@use "_banner";
+@use "_section";
+@use "_card";
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -178,6 +177,12 @@ table {
   --border-light: #e4cdb7;
   --border-dark: #4d3c2f;
 
+  --bg-card-light: #dcbc9f;
+  --bg-card-dark: #614a39;
+
+  --bg-card-content-light: #e4cdb7;
+  --bg-card-content-dark: #4d3c2f;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -224,6 +229,10 @@ table {
   color: var(--color-light);
   background-color: var(--background-light);
 
+  .switchLanguage {
+    color: var(--color-light);
+  }
+
   .fa-solid {
     color: var(--color-light);
   }
@@ -239,11 +248,39 @@ table {
   .banner__middle__profilePicture__picture {
     border: 2px solid #dcbc9f;
   }
+
+  .banner__middle__contactBtn {
+    color: var(--color-light);
+    background-color: var(--button-light);
+  }
   .linkedinBtn {
     color: var(--color-light);
   }
+  .separator {
+    border: 1.5px solid var(--color-light);
+  }
   .about {
     background-color: var(--section-light);
+  }
+  .card {
+    color: var(--color-light);
+    &__content {
+      background: var(--bg-card-content-light);
+      &__language {
+        &__tag {
+          background: var(--bg-card-light);
+        }
+      }
+    }
+    &__img-container {
+      background: var(--bg-card-light);
+    }
+  }
+  .github-link {
+    color: var(--color-light);
+  }
+  .project-card {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 }
 
@@ -251,6 +288,9 @@ table {
   color: var(--color-dark);
   background-color: var(--background-dark);
 
+  .switchLanguage {
+    color: var(--color-dark);
+  }
   .fa-solid {
     color: var(--color-dark);
   }
@@ -266,11 +306,39 @@ table {
   .banner__middle__profilePicture__picture {
     border: 2px solid #614a39;
   }
+  .banner__middle__contactBtn {
+    color: var(--color-dark);
+    background-color: var(--button-dark);
+  }
   .linkedinBtn {
     color: var(--color-dark);
   }
+  .separator {
+    border: 1.5px solid var(--color-dark);
+  }
   .about {
     background-color: var(--section-dark);
+  }
+  .card {
+    color: var(--color-dark);
+    &__content {
+      background: var(--bg-card-content-dark);
+      &__language {
+        &__tag {
+          background: var(--bg-card-dark);
+        }
+      }
+    }
+    &__img-container {
+      background: var(--bg-card-dark);
+    }
+  }
+  .github-link {
+    color: var(--color-dark);
+  }
+  .project-card {
+    box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 10px,
+      rgba(0, 0, 0, 0.4) -1px -1px 4px inset;
   }
 }
 
@@ -302,7 +370,6 @@ button {
 .separator {
   display: block;
   width: 100px;
-  border: 1.5px solid black;
 }
 
 // Main header style
@@ -339,15 +406,16 @@ button {
 
 // Switch language style
 .switchLanguage {
-  border-radius: 8px;
   padding: 2px;
   font-size: 14px;
   font-weight: 500;
   font-family: var(--title-font);
   cursor: pointer;
-
+  background: transparent;
+  border: none;
   option {
     font-size: 12px;
+    color: var(--color-light);
   }
 
   @media screen and (min-width: 768px) {
