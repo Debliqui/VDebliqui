@@ -23,6 +23,7 @@ function updateContent(lang) {
   const content = traduction[lang]
 
   if (!content) return
+  // Update header
   document
     .querySelector("[data-header-label]")
     .setAttribute("aria-label", content.headerLablel)
@@ -32,24 +33,34 @@ function updateContent(lang) {
   document
     .querySelector("[data-theme-label]")
     .setAttribute("aria-label", content.themeLabel)
+
+  // Update main content
+  document
+    .querySelector("[data-main-label]")
+    .setAttribute("aria-label", content.mainLabel)
+
+  // Update banner section
   document.querySelector("[data-title]").textContent = content.title
   document.querySelector("[data-job]").textContent = content.job
   document.querySelector("[data-location]").textContent = content.location
   document.querySelector("[data-statu]").textContent = content.statu
   document.querySelector("[data-subscribe]").textContent = content.subscribe
 
-  document
-    .querySelector("[data-main-label]")
-    .setAttribute("aria-label", content.mainLabel)
-
+  // Update about section
   const aboutSection = content.section.about
-  document.querySelector("[data-about-title]").textContent = aboutSection.title
+  document
+    .querySelector("[data-about-section]")
+    .setAttribute("aria-label", aboutSection.sectionLabel)
+  const aboutSectionTitle = document.querySelector("[data-about-title]")
+  aboutSectionTitle.textContent = aboutSection.title
+  aboutSectionTitle.setAttribute("aria-labelledby", aboutSection.title)
   document.querySelector("[data-about-catchphrase]").textContent =
     aboutSection.catchphrase
 
   const specialtiesList = document.querySelector("[data-about-specialties]")
   if (specialtiesList) {
     specialtiesList.innerHTML = ""
+    specialtiesList.setAttribute("aria-label", aboutSection.listLabel)
     aboutSection.listSpecialties.forEach((specialty) => {
       const listItem = document.createElement("li")
       listItem.textContent = specialty
@@ -57,6 +68,7 @@ function updateContent(lang) {
     })
   }
 
+  // Update project section
   const projectSection = document.querySelector("[data-projects]")
   document.querySelector("[data-project-title]").textContent =
     content.section.project.title
@@ -111,6 +123,7 @@ function updateContent(lang) {
     projectSection.innerHTML += projectCard
   })
 
+  // Update skills section
   document
     .querySelector("[data-skills-section]")
     .setAttribute("aria-label", content.section.skils.sectionLabel)

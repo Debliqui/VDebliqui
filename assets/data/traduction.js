@@ -11,9 +11,11 @@ const traduction = {
     subscribe: "S'abonner +",
     section: {
       about: {
+        sectionLabel: "Section à propos",
         title: "À PROPOS",
         catchphrase:
           "Développeur front-end junior, je suis spécialisé dans l’intégration Web",
+        listLabel: "Liste des spécialités",
         listSpecialties: [
           "Page dynamique,",
           "Page statique,",
@@ -93,9 +95,11 @@ const traduction = {
     subscribe: "Subscribe +",
     section: {
       about: {
+        sectionLabel: "About section",
         title: "ABOUT",
         catchphrase:
           "Junior front-end developer specializing in Web integration",
+        listLabel: "List of specialties",
         listSpecialties: [
           "Dynamic pages,",
           "Static pages,",
