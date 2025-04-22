@@ -81,4 +81,69 @@
       gap: 30px;
     }
   }
+
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    @include screen_tiny {
+      max-width: 400px;
+      gap: 20px;
+    }
+    @include screen_mobile {
+      max-width: 500px;
+      gap: 24px;
+    }
+    @include screen_tablet {
+      max-width: 600px;
+      gap: 30px;
+    }
+    &__title {
+      font-family: var(--title-font);
+      font-size: 16px;
+      @include screen_tiny {
+        font-size: 18px;
+      }
+      @include screen_mobile {
+        font-size: 20px;
+      }
+      @include screen_tablet {
+        font-size: 24px;
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      .logo {
+        width: 60px;
+        @include screen_tiny {
+          width: 80px;
+        }
+        @include screen_mobile {
+          width: 100px;
+        }
+        @include screen_tablet {
+          width: 120px;
+        }
+        & img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      & i {
+        font-size: 60px;
+        @include screen_tiny {
+          font-size: 80px;
+        }
+        @include screen_mobile {
+          font-size: 100px;
+        }
+        @include screen_tablet {
+          font-size: 120px;
+        }
+      }
+    }
+  }
 }

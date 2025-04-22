@@ -23,12 +23,24 @@ function updateContent(lang) {
   const content = traduction[lang]
 
   if (!content) return
-
+  document
+    .querySelector("[data-header-label]")
+    .setAttribute("aria-label", content.headerLablel)
+  document
+    .querySelector("[data-switch-lang]")
+    .setAttribute("aria-label", content.menuLabel)
+  document
+    .querySelector("[data-theme-label]")
+    .setAttribute("aria-label", content.themeLabel)
   document.querySelector("[data-title]").textContent = content.title
   document.querySelector("[data-job]").textContent = content.job
   document.querySelector("[data-location]").textContent = content.location
   document.querySelector("[data-statu]").textContent = content.statu
   document.querySelector("[data-subscribe]").textContent = content.subscribe
+
+  document
+    .querySelector("[data-main-label]")
+    .setAttribute("aria-label", content.mainLabel)
 
   const aboutSection = content.section.about
   document.querySelector("[data-about-title]").textContent = aboutSection.title
@@ -53,16 +65,18 @@ function updateContent(lang) {
   content.section.project.listProject.forEach((project) => {
     const projectCard = `
         <div class="project-card">
-            <article class="card" aria-label="Project ${project.name}">
+            <article class="card" aria-label="${
+              content.section.project.label.projectLabel
+            } ${project.name}">
               <div class="card__content" >
                 <h3 class="card__content__name">${project.name}</h3>
                 <p class="card__content__objectif" aria-label="${
-                  project.objectifLabel
-                }"><span aria-hidden="true">${project.objectifLabel} : </span>${
-      project.objectif
-    }</p>
+                  content.section.project.label.objectifLabel
+                }"><span aria-hidden="true">${
+      content.section.project.label.objectifLabel
+    } : </span>${project.objectif}</p>
                  <ul class="card__content__language" aria-label="${
-                   project.langTitle
+                   content.section.project.label.langTitle
                  }">
                     ${project.language
                       .map(
@@ -75,7 +89,7 @@ function updateContent(lang) {
               <a href="${
                 project.link
               }" target="_blank" class="card__img-container" aria-label="${
-      project.linkLabel
+      content.section.project.label.linkLabel
     } ${project.name}">
                 <img
                   src="${project.src}"
@@ -87,7 +101,7 @@ function updateContent(lang) {
           <a href="${
             project.linkGit
           }" target="_blank" class="github-link" aria-label="${
-      project.linkGitLabel
+      content.section.project.label.linkGitLabel
     } ${project.name}">
               <i class="fa-brands fa-github"></i>
             </a>
@@ -96,8 +110,26 @@ function updateContent(lang) {
     `
     projectSection.innerHTML += projectCard
   })
-  // document.querySelector("[data-skills-title]").textContent =
-  //   content.section.skils
+
+  document
+    .querySelector("[data-skills-section]")
+    .setAttribute("aria-label", content.section.skils.sectionLabel)
+  const sectionSkills = document.querySelector("[data-skills-title]")
+  sectionSkills.textContent = content.section.skils.title
+  sectionSkills.setAttribute(
+    "aria-labelledby",
+    content.section.skils.sectionLabel
+  )
+  document.querySelector("[data-language-label]").textContent =
+    content.section.skils.langLabel
+  document
+    .querySelector("[data-language-list]")
+    .setAttribute("aria-label", content.section.skils.langListLabel)
+  document.querySelector("[data-tool-label]").textContent =
+    content.section.skils.toolsLabel
+  document
+    .querySelector("[data-tool-list]")
+    .setAttribute("aria-label", content.section.skils.toolsListLabel)
 }
 
 document.addEventListener("DOMContentLoaded", () => {

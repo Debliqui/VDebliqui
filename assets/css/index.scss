@@ -1,6 +1,7 @@
 @use "_banner";
 @use "_section";
 @use "_card";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -245,6 +246,19 @@ table {
     background-color: var(--main-light);
   }
 
+  .section-container {
+    &__skills {
+      &__list {
+        .logo {
+          & img,
+          i {
+            filter: drop-shadow(rgba(0, 0, 0, 0.76) 1.95px 1.95px 2.6px);
+          }
+        }
+      }
+    }
+  }
+
   .banner__middle__profilePicture__picture {
     border: 2px solid #dcbc9f;
   }
@@ -259,7 +273,7 @@ table {
   .separator {
     border: 1.5px solid var(--color-light);
   }
-  .about {
+  .bg-darken {
     background-color: var(--section-light);
   }
   .card {
@@ -303,6 +317,19 @@ table {
     background-color: var(--main-dark);
   }
 
+  .section-container {
+    &__skills {
+      &__list {
+        .logo {
+          & img,
+          i {
+            filter: drop-shadow(4px 4px 4px #aaaaaa30);
+          }
+        }
+      }
+    }
+  }
+
   .banner__middle__profilePicture__picture {
     border: 2px solid #614a39;
   }
@@ -316,7 +343,7 @@ table {
   .separator {
     border: 1.5px solid var(--color-dark);
   }
-  .about {
+  .bg-darken {
     background-color: var(--section-dark);
   }
   .card {
@@ -370,6 +397,7 @@ button {
 .separator {
   display: block;
   width: 100px;
+  margin-bottom: 16px;
 }
 
 // Main header style
