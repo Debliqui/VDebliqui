@@ -29,6 +29,7 @@ const traduction = {
         ],
       },
       project: {
+        sectionLabel: "Section mes projets",
         title: "MES PROJETS",
         description:
           "Voici quelques projets sur lesquels j'ai travaillé. Vous pouvez les consulter sur mon GitHub.",
@@ -117,6 +118,7 @@ const traduction = {
         ],
       },
       project: {
+        sectionLabel: "My projects section",
         title: "MY PROJECTS",
         description:
           "Here are some projects I have worked on. You can check them out on my GitHub.",

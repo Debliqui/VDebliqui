@@ -75,6 +75,9 @@ function updateContent(lang) {
 
   // Update project section
   const projectSection = document.querySelector("[data-projects]")
+  document
+    .querySelector("[data-projects-section]")
+    .setAttribute("aria-label", content.section.project.sectionLabel)
   document.querySelector("[data-project-title]").textContent =
     content.section.project.title
 
