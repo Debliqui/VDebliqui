@@ -50,7 +50,11 @@
     <script type="module" src="./assets/js/language.js" defer></script>
   </head>
   <body>
-    <header class="main-header" aria-label="Réglages du thème et de la langue">
+    <header
+      class="main-header"
+      aria-label="Réglages du thème et de la langue"
+      data-header-label
+    >
       <select
         name="language"
         role="menu"
@@ -66,6 +70,7 @@
         data-theme-toggle
         aria-label="Changer de thème"
         class="switchTheme"
+        data-theme-label
       >
         <i class="fa-solid fa-sun" data-theme-icon></i>
       </button>
@@ -75,6 +80,7 @@
       aria-label="Contenu principal"
       itemScope
       itemType="http://schema.org/Person"
+      data-main-label
     >
       <section class="banner" aria-label="Introduction">
         <header class="banner__header" aria-label="Information profile">
@@ -130,7 +136,10 @@
           />
         </div>
       </section>
-      <section class="section-container about" aria-label="Section à propos">
+      <section
+        class="section-container bg-darken"
+        aria-label="Section à propos"
+      >
         <h2
           class="section-container__title"
           aria-labelledby="À propos"
@@ -159,6 +168,92 @@
         </h2>
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__projects" data-projects></div>
+      </section>
+      <section
+        class="section-container bg-darken"
+        aria-label="Section mes compétences"
+        data-skills-section
+      >
+        <h2
+          class="section-container__title"
+          aria-labelledby="Mes compétences"
+          data-skills-title
+        >
+          COMPÉTENCES
+        </h2>
+        <hr class="separator" aria-hidden="true" />
+        <div class="section-container__skills">
+          <h3 class="section-container__skills__title" data-language-label>
+            Langages
+          </h3>
+          <ul
+            class="section-container__skills__list"
+            aria-label="Liste des langages"
+            data-language-list
+          >
+            <li aria-label="HTML 5" class="logo">
+              <img
+                src="assets/image/logo/html.svg"
+                alt="HTML 5"
+                aria-hidden="true"
+              />
+            </li>
+            <li aria-label="CSS 3" class="logo">
+              <img
+                src="assets/image/logo/css.svg"
+                alt="CSS 3"
+                aria-hidden="true"
+              />
+            </li>
+            <li aria-label="JavaScript" class="logo">
+              <img
+                src="assets/image/logo/javaScript.svg"
+                alt="JavaScript"
+                aria-hidden="true"
+              />
+            </li>
+            <li aria-label="SCSS" class="logo">
+              <img
+                src="assets/image/logo/sass.svg"
+                alt="Sass"
+                aria-hidden="true"
+              />
+            </li>
+          </ul>
+          <h3 class="section-container__skills__title" data-tool-label>
+            Outils
+          </h3>
+          <ul
+            class="section-container__skills__list"
+            aria-label="Liste des outils"
+            data-tool-list
+          >
+            <li aria-label="GitHub" class="logo">
+              <i class="fa-brands fa-github"></i>
+            </li>
+            <li aria-label="React" class="logo">
+              <img
+                src="assets/image/logo/react.svg"
+                alt="React"
+                aria-hidden="true"
+              />
+            </li>
+            <li aria-label="Figma" class="logo">
+              <img
+                src="assets/image/logo/figma.svg"
+                alt="Figma"
+                aria-hidden="true"
+              />
+            </li>
+            <li aria-label="Redux Tools Kit" class="logo">
+              <img
+                src="assets/image/logo/redux.svg"
+                alt="Redux"
+                aria-hidden="true"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
   </body>
