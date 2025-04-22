@@ -1,6 +1,7 @@
 @use "_banner";
 @use "_section";
 @use "_card";
+@use "_footer";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -234,7 +235,8 @@ table {
     color: var(--color-light);
   }
 
-  .fa-solid {
+  .fa-solid,
+  .fa-brands {
     color: var(--color-light);
   }
 
@@ -305,7 +307,8 @@ table {
   .switchLanguage {
     color: var(--color-dark);
   }
-  .fa-solid {
+  .fa-solid,
+  .fa-brands {
     color: var(--color-dark);
   }
 
@@ -374,6 +377,19 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px;
+  @include screen_mobile {
+    padding: 20px;
+  }
+  @include screen_mobile {
+    padding: 24px;
+  }
+  @include screen_tablet {
+    padding: 32px;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 button {

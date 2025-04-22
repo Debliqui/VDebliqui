@@ -1,0 +1,64 @@
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 16px;
+  @include screen_mobile {
+    padding-top: 20px;
+  }
+  @include screen_mobile {
+    padding-top: 24px;
+  }
+  @include screen_tablet {
+    padding-top: 32px;
+  }
+  & p {
+    font-family: var(--body-font);
+    font-size: 14px;
+    @include screen_tiny {
+      font-size: 16px;
+    }
+    @include screen_mobile {
+      font-size: 18px;
+    }
+    @include screen_tablet {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    &__item {
+      font-size: 20px;
+      @include screen_tiny {
+        font-size: 22px;
+      }
+      @include screen_mobile {
+        font-size: 24px;
+      }
+      @include screen_tablet {
+        font-size: 26px;
+      }
+    }
+  }
+}

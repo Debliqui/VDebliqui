@@ -474,6 +474,72 @@
   }
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding-top: 32px;
+  }
+}
+.footer p {
+  font-family: var(--body-font);
+  font-size: 14px;
+}
+@media screen and (min-width: 400px) {
+  .footer p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer p {
+    font-size: 20px;
+  }
+}
+.footer__list {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 8px;
+}
+.footer__list__item {
+  font-size: 20px;
+}
+@media screen and (min-width: 400px) {
+  .footer__list__item {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__list__item {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__list__item {
+    font-size: 26px;
+  }
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -667,7 +733,8 @@ table {
 [data-theme=light] .switchLanguage {
   color: var(--color-light);
 }
-[data-theme=light] .fa-solid {
+[data-theme=light] .fa-solid,
+[data-theme=light] .fa-brands {
   color: var(--color-light);
 }
 [data-theme=light] button:hover {
@@ -722,7 +789,8 @@ table {
 [data-theme=dark] .switchLanguage {
   color: var(--color-dark);
 }
-[data-theme=dark] .fa-solid {
+[data-theme=dark] .fa-solid,
+[data-theme=dark] .fa-brands {
   color: var(--color-dark);
 }
 [data-theme=dark] button:hover {
@@ -774,6 +842,25 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 16px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 32px;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
