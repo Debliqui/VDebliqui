@@ -4,12 +4,16 @@ const traduction = {
     menuLabel: "Sélectionner la langue",
     themeLabel: "Passer en mode sombre",
     mainLabel: "Contenu principal",
-    title: "Debliqui Valentin",
-    job: "Intégrateur Web",
-    location: "Montréal, Québec, Canada",
-    statu: "En recherche",
-    subscribe: "S'abonner +",
     section: {
+      banner: {
+        title: "Debliqui Valentin",
+        job: "Intégrateur Web",
+        location: "Montréal, Québec, Canada",
+        statu: "En recherche",
+        subscribeLabel: "Ouvrir le formulaire de contact",
+        subscribe: "S'abonner +",
+        linkLabel: "Visitez mon profil LinkedIn",
+      },
       about: {
         sectionLabel: "Section à propos",
         title: "À PROPOS",
@@ -88,12 +92,16 @@ const traduction = {
     menuLabel: "Select language",
     themeLabel: "Switch to dark mode",
     mainLabel: "Main content",
-    title: "Debliqui Valentin",
-    job: "Web integrator",
-    location: "Montreal, Quebec, Canada",
-    statu: "Open to work",
-    subscribe: "Subscribe +",
     section: {
+      banner: {
+        title: "Debliqui Valentin",
+        job: "Web integrator",
+        location: "Montreal, Quebec, Canada",
+        statu: "Open to work",
+        subscribeLabel: "Open contact form",
+        subscribe: "Subscribe +",
+        linkLabel: "Visit my LinkedIn profile",
+      },
       about: {
         sectionLabel: "About section",
         title: "ABOUT",

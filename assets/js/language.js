@@ -40,12 +40,17 @@ function updateContent(lang) {
     .setAttribute("aria-label", content.mainLabel)
 
   // Update banner section
-  document.querySelector("[data-title]").textContent = content.title
-  document.querySelector("[data-job]").textContent = content.job
-  document.querySelector("[data-location]").textContent = content.location
-  document.querySelector("[data-statu]").textContent = content.statu
-  document.querySelector("[data-subscribe]").textContent = content.subscribe
-
+  const bannerSection = content.section.banner
+  document.querySelector("[data-title]").textContent = bannerSection.title
+  document.querySelector("[data-job]").textContent = bannerSection.job
+  document.querySelector("[data-location]").textContent = bannerSection.location
+  document.querySelector("[data-statu]").textContent = bannerSection.statu
+  const subscribeBtn = document.querySelector("[data-subscribe]")
+  subscribeBtn.textContent = bannerSection.subscribe
+  subscribeBtn.setAttribute("aria-label", bannerSection.subscribeLabel)
+  document
+    .querySelector("[data-link-label]")
+    .setAttribute("aria-label", bannerSection.linkLabel)
   // Update about section
   const aboutSection = content.section.about
   document
