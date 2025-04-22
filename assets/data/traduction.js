@@ -87,6 +87,12 @@ const traduction = {
         toolsListLabel: "Liste des outils",
       },
     },
+    footer: {
+      footerLabel: "Liens utiles",
+      listLabel: "Liste des liens utiles",
+      linkedinLabel: "Visitez mon profil LinkedIn",
+      githubLabel: "Visitez mon profil GitHub",
+    },
   },
   en: {
     headerLablel: "Theme and language settings",
@@ -174,6 +180,12 @@ const traduction = {
         toolsLabel: "Tolls",
         toolsListLabel: "List of tools",
       },
+    },
+    footer: {
+      footerLabel: "Useful links",
+      listLabel: "List of useful links",
+      linkedinLabel: "Visit my LinkedIn profile",
+      githubLabel: "Visit my GitHub profile",
     },
   },
 }

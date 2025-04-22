@@ -151,6 +151,20 @@ function updateContent(lang) {
   document
     .querySelector("[data-tool-list]")
     .setAttribute("aria-label", content.section.skils.toolsListLabel)
+
+  // Update footer
+  document
+    .querySelector("[data-footer-label]")
+    .setAttribute("aria-label", content.footer.footerLabel)
+  document
+    .querySelector("[data-list-link]")
+    .setAttribute("aria-label", content.footer.listLabel)
+  document
+    .querySelector("[data-linkedin-label]")
+    .setAttribute("aria-label", content.footer.linkedinLabel)
+  document
+    .querySelector("[data-github-label]")
+    .setAttribute("aria-label", content.footer.githubLabel)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
