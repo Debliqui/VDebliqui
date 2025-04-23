@@ -11,7 +11,7 @@ const traduction = {
         location: "Montréal, Québec, Canada",
         statu: "En recherche",
         subscribeLabel: "Ouvrir le formulaire de contact",
-        subscribe: "S'abonner +",
+        subscribe: "Me contacter +",
         linkLabel: "Visitez mon profil LinkedIn",
       },
       about: {
@@ -93,6 +93,20 @@ const traduction = {
       linkedinLabel: "Visitez mon profil LinkedIn",
       githubLabel: "Visitez mon profil GitHub",
     },
+    contact: {
+      dialogLabel: "Information de contact",
+      closeLabel: "Fermer la fenêtre",
+      subtitle:
+        "Envie d'en savoir plus ? </br> Envie que l'on collabore ensemble ?",
+      descriptionLabel: "Invitation à la prise de contact",
+      description:
+        "Contactez-moi, je vous répondrai dans les plus brefs délais !",
+      copyBtnLabel: "Cliquer pour copier l'email",
+      copyBtn: "Cliquer pour copier",
+      mailBtnLabel: "Redirection vers les mails",
+      copyMessageLabel: "Confirmation de la copie",
+      copyMessage: "Copié dans le presse-papiers",
+    },
   },
   en: {
     headerLablel: "Theme and language settings",
@@ -106,7 +120,7 @@ const traduction = {
         location: "Montreal, Quebec, Canada",
         statu: "Open to work",
         subscribeLabel: "Open contact form",
-        subscribe: "Subscribe +",
+        subscribe: "Contact me +",
         linkLabel: "Visit my LinkedIn profile",
       },
       about: {
@@ -186,6 +200,18 @@ const traduction = {
       listLabel: "List of useful links",
       linkedinLabel: "Visit my LinkedIn profile",
       githubLabel: "Visit my GitHub profile",
+    },
+    contact: {
+      dialogLabel: "Contact information",
+      closeLabel: "Close the window",
+      subtitle: "Want to know more? </br> Want us to collaborate together?",
+      descriptionLabel: "Invitation to contact",
+      description: "Contact me, I will reply as soon as possible!",
+      copyBtnLabel: "Click to copy email",
+      copyBtn: "Click to copy",
+      mailBtnLabel: "Redirect to emails",
+      copyMessageLabel: "Copy confirmation",
+      copyMessage: "Copied to clipboard",
     },
   },
 }

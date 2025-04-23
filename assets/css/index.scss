@@ -2,6 +2,7 @@
 @use "_section";
 @use "_card";
 @use "_footer";
+@use "_modal";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -177,7 +178,7 @@ table {
   --section-dark: #3e3128;
 
   --border-light: #e4cdb7;
-  --border-dark: #4d3c2f;
+  --border-dark: #322922;
 
   --bg-card-light: #dcbc9f;
   --bg-card-dark: #614a39;
@@ -298,6 +299,24 @@ table {
   .project-card {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
+
+  .dialog {
+    background-color: var(--background-light);
+    color: var(--color-light);
+    &__contact {
+      &__copy-btn {
+        background-color: var(--bg-card-light);
+        &__content {
+          color: var(--color-light);
+        }
+      }
+    }
+  }
+  [data-copy-message] {
+    border: 1px solid var(--color-light);
+    background-color: var(--bg-card-light);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
 [data-theme="dark"] {
@@ -313,7 +332,7 @@ table {
   }
 
   button:hover {
-    border-color: var(--border-dark);
+    border: 1px solid var(--border-dark);
   }
 
   .main-content {
@@ -370,6 +389,24 @@ table {
     box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 10px,
       rgba(0, 0, 0, 0.4) -1px -1px 4px inset;
   }
+
+  .dialog {
+    background-color: var(--bg-card-content-dark);
+    color: var(--color-dark);
+    &__contact {
+      &__copy-btn {
+        background-color: var(--bg-card-dark);
+        &__content {
+          color: var(--color-dark);
+        }
+      }
+    }
+  }
+  [data-copy-message] {
+    border: 1px solid var(--color-dark);
+    background-color: var(--bg-card-dark);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
 }
 
 // Global styles
@@ -414,6 +451,11 @@ button {
   display: block;
   width: 100px;
   margin-bottom: 16px;
+}
+
+a:hover,
+button:hover {
+  scale: 1.05;
 }
 
 // Main header style
@@ -473,6 +515,7 @@ button {
 
 // Linkendin button style
 .linkedinBtn {
+  width: fit-content;
   text-decoration: none;
   display: flex;
   align-items: center;

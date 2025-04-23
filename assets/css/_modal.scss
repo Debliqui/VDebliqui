@@ -1,0 +1,257 @@
+@mixin screen_tiny {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin screen_mobile {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen_tablet {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+.dialog {
+  width: auto;
+  padding: 18px;
+  border: none;
+  max-width: 100%;
+  height: 50%;
+  margin-bottom: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transform: scale(0);
+  @media screen and (min-width: 450px) {
+    margin: auto;
+    border-radius: 10px;
+    max-width: 400px;
+  }
+  @include screen_mobile {
+    height: 55%;
+  }
+  @include screen_tablet {
+    max-width: 500px;
+    height: 60%;
+  }
+  &:open {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    transform: scale(1);
+    animation: scaleUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+  &__closeBtn {
+    width: 25px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    @include screen_tiny {
+      width: 28px;
+    }
+    @include screen_mobile {
+      width: 30px;
+    }
+    @include screen_tablet {
+      width: 32px;
+    }
+    & i {
+      font-size: 15px;
+      width: 15px;
+      @include screen_tiny {
+        font-size: 18px;
+      }
+      @include screen_mobile {
+        font-size: 20px;
+      }
+      @include screen_tablet {
+        font-size: 22px;
+      }
+    }
+  }
+  &__title {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--title-font);
+    text-align: center;
+    @include screen_tiny {
+      font-size: 18px;
+    }
+    @include screen_mobile {
+      font-size: 20px;
+    }
+    @include screen_tablet {
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--title-font);
+    text-align: center;
+    padding-bottom: 32px;
+    @include screen_tiny {
+      font-size: 16px;
+    }
+    @include screen_mobile {
+      font-size: 18px;
+      padding: 20px 0 40px 0;
+    }
+    @include screen_tablet {
+      font-size: 20px;
+    }
+  }
+  &__description {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--body-font);
+    text-align: center;
+    padding-bottom: 32px;
+    @include screen_tiny {
+      font-size: 14px;
+    }
+    @include screen_mobile {
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
+    @include screen_tablet {
+      font-size: 18px;
+    }
+  }
+  &__email {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--title-font);
+    text-align: center;
+    padding-bottom: 16px;
+    @include screen_tiny {
+      font-size: 16px;
+    }
+    @include screen_mobile {
+      font-size: 18px;
+    }
+    @include screen_tablet {
+      font-size: 20px;
+    }
+  }
+  &__contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 42px;
+    &__copy-btn {
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      @include screen_tiny {
+        font-size: 14px;
+      }
+      @include screen_mobile {
+        font-size: 16px;
+      }
+      @include screen_tablet {
+        font-size: 18px;
+      }
+      &__content {
+        font-family: var(--body-font);
+        font-size: 12px;
+        @include screen_tiny {
+          font-size: 14px;
+        }
+        @include screen_mobile {
+          font-size: 16px;
+        }
+        @include screen_tablet {
+          font-size: 18px;
+        }
+      }
+    }
+    &__mail-btn {
+      width: 12px;
+      font-size: 12px;
+      @include screen_tiny {
+        width: 14px;
+        font-size: 14px;
+      }
+      @include screen_mobile {
+        width: 16px;
+        font-size: 16px;
+      }
+      @include screen_tablet {
+        width: 18px;
+        font-size: 18px;
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    &__item {
+      font-size: 24px;
+    }
+  }
+}
+.copy-message {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  padding: 8px;
+  font-size: 12px;
+  transform: scaleX(0);
+  transition: all 0.3s;
+  @include screen_tiny {
+    font-size: 14px;
+    padding: 12px;
+    bottom: 16px;
+    right: 16px;
+  }
+  @include screen_mobile {
+    font-size: 16px;
+  }
+  @include screen_tablet {
+    font-size: 18px;
+  }
+  & i {
+    padding-right: 8px;
+    font-size: 10px;
+    @include screen_tiny {
+      font-size: 12px;
+    }
+    @include screen_mobile {
+      font-size: 14px;
+    }
+    @include screen_tablet {
+      font-size: 16px;
+    }
+  }
+}
+.active {
+  transform: scale(1);
+  transition-delay: 0s;
+}
+
+@keyframes scaleUpModal {
+  0% {
+    transform: scale(0.8) translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+  }
+}

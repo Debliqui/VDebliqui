@@ -48,6 +48,9 @@
     right: 0;
     display: flex;
     gap: 8px;
+    @include screen_mobile {
+      gap: 10px;
+    }
     &__item {
       font-size: 20px;
       @include screen_tiny {
