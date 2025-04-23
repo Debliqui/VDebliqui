@@ -45,7 +45,7 @@ function updateContent(lang) {
   document.querySelector("[data-job]").textContent = bannerSection.job
   document.querySelector("[data-location]").textContent = bannerSection.location
   document.querySelector("[data-statu]").textContent = bannerSection.statu
-  const subscribeBtn = document.querySelector("[data-subscribe]")
+  const subscribeBtn = document.querySelector("[data-contact-btn]")
   subscribeBtn.textContent = bannerSection.subscribe
   subscribeBtn.setAttribute("aria-label", bannerSection.subscribeLabel)
   document
@@ -157,14 +157,47 @@ function updateContent(lang) {
     .querySelector("[data-footer-label]")
     .setAttribute("aria-label", content.footer.footerLabel)
   document
-    .querySelector("[data-list-link]")
-    .setAttribute("aria-label", content.footer.listLabel)
+    .querySelectorAll("[data-list-link]")
+    .forEach((element) =>
+      element.setAttribute("aria-label", content.footer.listLabel)
+    )
   document
-    .querySelector("[data-linkedin-label]")
-    .setAttribute("aria-label", content.footer.linkedinLabel)
+    .querySelectorAll("[data-linkedin-label]")
+    .forEach((element) =>
+      element.setAttribute("aria-label", content.footer.linkedinLabel)
+    )
   document
-    .querySelector("[data-github-label]")
-    .setAttribute("aria-label", content.footer.githubLabel)
+    .querySelectorAll("[data-github-label]")
+    .forEach((element) =>
+      element.setAttribute("aria-label", content.footer.githubLabel)
+    )
+
+  // Update contact modal
+  document
+    .querySelector("[data-dialog-label]")
+    .setAttribute("aria-label", content.contact.dialogLabel)
+  document
+    .querySelector("[data-close-btn]")
+    .setAttribute("aria-label", content.contact.closeLabel)
+  document.querySelector("[data-dialog-subtitle]").innerHTML =
+    content.contact.subtitle
+  const dialogDesc = document.querySelector("[data-dialog-description]")
+  dialogDesc.textContent = content.contact.description
+  dialogDesc.setAttribute("aria-label", content.contact.descriptionLabel)
+  document
+    .querySelector("[data-copy-btn]")
+    .setAttribute("aria-label", content.contact.copyBtnLabel)
+  const copyBtnContent = document.querySelector("[data-copy-btn-content]")
+  copyBtnContent.setAttribute("aria-label", content.contact.copyBtn)
+  copyBtnContent.textContent = content.contact.copyBtn
+  document
+    .querySelector("[data-mail-btn]")
+    .setAttribute("aria-label", content.contact.mailBtnLabel)
+  document
+    .querySelector("[data-copy-message]")
+    .setAttribute("aria-label", content.contact.copyMessageLabel)
+  document.querySelector("[data-copy-message-content]").textContent =
+    content.contact.copyMessage
 }
 
 document.addEventListener("DOMContentLoaded", () => {

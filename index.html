@@ -48,6 +48,7 @@
     </script>
     <script type="module" src="./assets/js/theme.js" defer></script>
     <script type="module" src="./assets/js/language.js" defer></script>
+    <script type="module" src="./assets/js/contactModal.js" defer></script>
   </head>
   <body>
     <header
@@ -123,9 +124,9 @@
           <button
             class="banner__middle__contactBtn"
             aria-label="Ouvrir le formulaire de contact"
-            data-subscribe
+            data-contact-btn
           >
-            S'abonner +
+            Me contacter +
           </button>
         </div>
         <div class="banner__backgroundImg" aria-hidden>
@@ -264,30 +265,118 @@
     </main>
     <footer class="footer" aria-label="Liens utiles" data-footer-label>
       <p>VDebliqui ©2025</p>
-      <ul
+      <div
         class="footer__list"
         aria-label="Liste des liens utiles"
         data-list-link
       >
-        <li class="footer__list__item">
-          <a
-            href="https://github.com/Debliqui"
-            target="_blank"
-            aria-label="Visitez mon profil GitHub"
-            data-gitHub-label
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </li>
-        <li class="footer__list__item">
-          <a
-            href="https://www.linkedin.com/in/valentin-d-290332112/"
-            target="_blank"
-            aria-label="Visitez mon profil LinkedIn"
-            data-linkedin-label
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
+        <a
+          href="https://github.com/Debliqui"
+          target="_blank"
+          class="footer__list__item"
+          aria-label="Visitez mon profil GitHub"
+          data-gitHub-label
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/valentin-d-290332112/"
+          target="_blank"
+          class="footer__list__item"
+          aria-label="Visitez mon profil LinkedIn"
+          data-linkedin-label
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
     </footer>
+    <dialog
+      class="dialog"
+      role="dialog"
+      aria-label="Information de contact"
+      data-dialog-label
+    >
+      <button
+        class="dialog__closeBtn"
+        aria-label="Fermer la fenêtre"
+        data-close-btn
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <h2 class="dialog__title">CONTACT</h2>
+      <hr class="separator" aria-hidden="true" />
+      <h3 class="dialog__subtitle" data-dialog-subtitle>
+        Envie d'en savoir plus ? <br />
+        Envie que l'on collabore ensemble ?
+      </h3>
+      <p
+        class="dialog__description"
+        aria-label="Invitation à la prise de contact"
+        data-dialog-description
+      >
+        Contactez-moi, je vous répondrai dans les plus brefs délais !
+      </p>
+      <p class="dialog__email" aria-label="email" data-email>
+        debliqui.valentin@outlook.com
+      </p>
+      <div class="dialog__contact">
+        <button
+          class="dialog__contact__copy-btn"
+          aria-label="Cliquer pour copier l'email"
+          data-copy-btn
+        >
+          <i class="fa-solid fa-copy" aria-hidden="true"></i>
+          <span
+            class="dialog__contact__copy-btn__content"
+            aria-hidden="true"
+            data-copy-btn-content
+          >
+            Cliquer pour copier</span
+          >
+        </button>
+        <a
+          href="mailto:debliqui.valentin@outlook.com"
+          aria-label="Redirection vers les mails"
+          class="dialog__contact__mail-btn"
+          data-mail-btn
+        >
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div
+        class="dialog__list"
+        aria-label="Liste des liens utiles"
+        data-list-link
+      >
+        <a
+          href="https://github.com/Debliqui"
+          target="_blank"
+          class="dialog__list__item"
+          aria-label="Visitez mon profil GitHub"
+          data-gitHub-label
+        >
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/valentin-d-290332112/"
+          target="_blank"
+          class="dialog__list__item"
+          aria-label="Visitez mon profil LinkedIn"
+          data-linkedin-label
+        >
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p
+        class="copy-message"
+        aria-label="Confirmation de la copie"
+        aria-hidden="true"
+        role="alert"
+        data-copy-message
+      >
+        <i class="fa-solid fa-check"></i
+        ><span class="copy-message__content" data-copy-message-content>
+          Copié dans le presse-papiers
+        </span>
+      </p>
+    </dialog>
   </body>
 </html>
