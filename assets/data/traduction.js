@@ -105,7 +105,7 @@ const traduction = {
           },
         ],
       },
-      skils: {
+      skills: {
         sectionLabel: "Section mes compétences",
         titleLabel: "Mes compétences",
         title: "COMPÉTENCE",
@@ -113,6 +113,60 @@ const traduction = {
         langListLabel: "Liste des langages",
         toolsLabel: "Outils",
         toolsListLabel: "Liste des outils",
+        specialitiesLabel: "Spécialisations",
+        specialitiesListLabel: "Liste des spécialisations",
+        frameworkLabel: "Frameworks",
+        frameworkListLabel: "Liste des frameworks & libraries",
+        catchphraseLabel: "Phrase d'accroche",
+        catchphrase:
+          "Créer des expériences web performantes, accessibles et élégantes est au cœur de ma démarche.",
+        gridLabel: "Liste des compétences",
+        article: [
+          {
+            icon: '<i class="fa-solid fa-globe"></i>',
+            cardLabel: "Carte des langages",
+            title: "Langages",
+            listLabel: "Liste des langages",
+            list: ["HTML 5 / CSS 3 (SCSS)", "JavaScript (ES6+)"],
+          },
+          {
+            icon: '<i class="fa-solid fa-tools"></i>',
+            cardLabel: "Carte des outils",
+            title: "Outils",
+            listLabel: "Liste des outils",
+            list: [
+              "Git & GitHub",
+              "Figma to code",
+              "Resposive Design / Mobil first",
+              "Agile / Scrum",
+            ],
+          },
+          {
+            icon: '<i class="fa-solid fa-bolt"></i>',
+            cardLabel: "Carte des spécialisations",
+            title: "Spécialisations",
+            listLabel: "Liste des spécialisations",
+            list: [
+              "Accessibilité Web (a11y)",
+              "SEO technique",
+              "Optimisation des performances",
+            ],
+          },
+          {
+            icon: '<i class="fa-solid fa-puzzle-piece"></i>',
+            cardLabel: "Carte des frameworks & libraries",
+            title: "Frameworks & libraries",
+            listLabel: "Liste des frameworks & libraries",
+            list: [
+              "React",
+              "Redux Toolkit",
+              "React Router",
+              "Jest",
+              "React Testing Library",
+              "Node.js",
+            ],
+          },
+        ],
       },
     },
     footer: {
@@ -241,7 +295,7 @@ const traduction = {
           },
         ],
       },
-      skils: {
+      skills: {
         sectionLabel: "My skills section",
         titleLabel: "My skills",
         title: "SKILLS",
@@ -249,6 +303,60 @@ const traduction = {
         langListLabel: "List of languages",
         toolsLabel: "Tolls",
         toolsListLabel: "List of tools",
+        specialitiesLabel: "Specialties",
+        specialitiesListLabel: "List of specialties",
+        frameworkLabel: "Frameworks",
+        frameworkListLabel: "List of frameworks & libraries",
+        catchphraseLabel: "Catchphrase",
+        catchphrase:
+          "Creating high-performance, accessible and elegant web experiences is at the heart of my approach.",
+        gridLabel: "List of skills",
+        article: [
+          {
+            icon: '<i class="fa-solid fa-globe"></i>',
+            cardLabel: "Card of languages",
+            title: "Languages",
+            listLabel: "List of languages",
+            list: ["HTML 5 / CSS 3 (SCSS)", "JavaScript (ES6+)"],
+          },
+          {
+            icon: '<i class="fa-solid fa-tools"></i>',
+            cardLabel: "Card of tools",
+            title: "Tools",
+            listLabel: "List of tools",
+            list: [
+              "Git & GitHub",
+              "Figma to code",
+              "Resposive Design / Mobil first",
+              "Agile / Scrum",
+            ],
+          },
+          {
+            icon: '<i class="fa-solid fa-bolt"></i>',
+            cardLabel: "Card of specialties",
+            title: "Specialties",
+            listLabel: "List of specialties",
+            list: [
+              "Web accessibility (a11y)",
+              "SEO technique",
+              "Performance optimization",
+            ],
+          },
+          {
+            icon: '<i class="fa-solid fa-puzzle-piece"></i>',
+            cardLabel: "Card of frameworks & libraries",
+            title: "Frameworks & libraries",
+            listLabel: "List of frameworks & libraries",
+            list: [
+              "React",
+              "Redux Toolkit",
+              "React Router",
+              "Jest",
+              "React Testing Library",
+              "Node.js",
+            ],
+          },
+        ],
       },
     },
     footer: {

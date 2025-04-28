@@ -259,11 +259,13 @@ table {
 
   .section-container {
     &__skills {
-      &__list {
-        .logo {
-          & img,
-          i {
-            filter: drop-shadow(rgba(0, 0, 0, 0.76) 1.95px 1.95px 2.6px);
+      &__grid {
+        &__card {
+          background: var(--background-light);
+          &__header {
+            i {
+              color: #4b5563;
+            }
           }
         }
       }
@@ -358,11 +360,13 @@ table {
 
   .section-container {
     &__skills {
-      &__list {
-        .logo {
-          & img,
-          i {
-            filter: drop-shadow(4px 4px 4px #aaaaaa30);
+      &__grid {
+        &__card {
+          background: var(--background-dark);
+          &__header {
+            i {
+              color: #e5e7eb;
+            }
           }
         }
       }
