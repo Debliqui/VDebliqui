@@ -391,6 +391,7 @@ table {
   }
   .card {
     color: var(--color-dark);
+    background: var(--bg-card-content-dark);
     &__content {
       background: var(--bg-card-content-dark);
       &__language {

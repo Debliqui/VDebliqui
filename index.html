@@ -140,21 +140,6 @@
       </section>
       <section
         class="section-container bg-darken"
-        aria-label="Section mes projets"
-        data-projects-section
-      >
-        <h2
-          class="section-container__title"
-          aria-labelledby="Mes projets"
-          data-project-title
-        >
-          MES PROJETS
-        </h2>
-        <hr class="separator" aria-hidden="true" />
-        <div class="section-container__projects" data-projects></div>
-      </section>
-      <section
-        class="section-container"
         aria-label="Section à propos"
         data-about-section
       >
@@ -167,10 +152,7 @@
         </h2>
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__about">
-          <p
-            class="section-container__about__catchphrase"
-            data-about-catchphrase
-          >
+          <p class="catchphrase" data-about-catchphrase>
             Développeur front-end junior, je suis spécialisé dans l’intégration
             Web
           </p>
@@ -179,6 +161,26 @@
             aria-label="Liste des spécialités"
             data-about-specialties
           ></ul>
+        </div>
+      </section>
+      <section
+        class="section-container"
+        aria-label="Section mes projets"
+        data-projects-section
+      >
+        <h2
+          class="section-container__title"
+          aria-labelledby="Mes projets"
+          data-project-title
+        >
+          MES PROJETS
+        </h2>
+        <hr class="separator" aria-hidden="true" />
+        <div class="section-container__projects">
+          <p class="catchphrase" data-projects-catchphrase>
+            Voici quelques projets sur lesquels j'ai travaillé.
+          </p>
+          <div class="section-container__projects__grid" data-projects></div>
         </div>
       </section>
       <section
@@ -195,10 +197,7 @@
         </h2>
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__skills">
-          <p
-            class="section-container__skills__catchphrase"
-            data-skills-catchphrase
-          >
+          <p class="catchphrase" data-skills-catchphrase>
             Créer des expériences web performantes, accessibles et élégantes est
             au cœur de ma démarche.
           </p>

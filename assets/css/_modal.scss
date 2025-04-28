@@ -262,9 +262,9 @@
 
 // Modal for project
 .dialog-project {
-  height: 90%;
+  height: 100%;
   @include screen_tiny {
-    height: 80%;
+    height: 85%;
   }
   @media (min-width: 450px) {
     height: 60%;

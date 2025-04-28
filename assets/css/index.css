@@ -200,28 +200,6 @@
   flex-direction: column;
   align-items: center;
 }
-.section-container__about__catchphrase {
-  font-family: var(--body-font);
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-align: center;
-}
-@media screen and (min-width: 400px) {
-  .section-container__about__catchphrase {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .section-container__about__catchphrase {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .section-container__about__catchphrase {
-    font-size: 20px;
-  }
-}
 .section-container__about__listSpecialtie {
   padding-top: 8px;
   font-family: var(--body-font);
@@ -246,31 +224,22 @@
   }
 }
 .section-container__projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-container__projects__grid {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  padding: 16px 0;
-}
-.section-container__skills__catchphrase {
-  font-family: var(--body-font);
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  text-align: center;
-}
-@media screen and (min-width: 400px) {
-  .section-container__skills__catchphrase {
-    font-size: 16px;
-  }
 }
 @media screen and (min-width: 768px) {
-  .section-container__skills__catchphrase {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .section-container__skills__catchphrase {
-    font-size: 20px;
+  .section-container__projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 .section-container__skills__grid {
@@ -333,6 +302,29 @@
 }
 .section-container__skills__grid__card:hover {
   transform: translateY(-5px);
+}
+
+.catchphrase {
+  font-family: var(--body-font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (min-width: 400px) {
+  .catchphrase {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .catchphrase {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .catchphrase {
+    font-size: 20px;
+  }
 }
 
 .project-card {
@@ -871,11 +863,11 @@
   }
 }
 .dialog-project {
-  height: 90%;
+  height: 100%;
 }
 @media screen and (min-width: 400px) {
   .dialog-project {
-    height: 80%;
+    height: 85%;
   }
 }
 @media (min-width: 450px) {
@@ -1315,6 +1307,7 @@ table {
 }
 [data-theme=dark] .card {
   color: var(--color-dark);
+  background: var(--bg-card-content-dark);
 }
 [data-theme=dark] .card__content {
   background: var(--bg-card-content-dark);
