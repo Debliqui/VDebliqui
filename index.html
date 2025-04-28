@@ -140,6 +140,21 @@
       </section>
       <section
         class="section-container bg-darken"
+        aria-label="Section mes projets"
+        data-projects-section
+      >
+        <h2
+          class="section-container__title"
+          aria-labelledby="Mes projets"
+          data-project-title
+        >
+          MES PROJETS
+        </h2>
+        <hr class="separator" aria-hidden="true" />
+        <div class="section-container__projects" data-projects></div>
+      </section>
+      <section
+        class="section-container"
         aria-label="Section à propos"
         data-about-section
       >
@@ -160,21 +175,6 @@
           aria-label="Liste des spécialités"
           data-about-specialties
         ></ul>
-      </section>
-      <section
-        class="section-container"
-        aria-label="Section mes projets"
-        data-projects-section
-      >
-        <h2
-          class="section-container__title"
-          aria-labelledby="Mes projets"
-          data-project-title
-        >
-          MES PROJETS
-        </h2>
-        <hr class="separator" aria-hidden="true" />
-        <div class="section-container__projects" data-projects></div>
       </section>
       <section
         class="section-container bg-darken"
@@ -264,7 +264,7 @@
       </section>
     </main>
     <footer class="footer" aria-label="Liens utiles" data-footer-label>
-      <p>VDebliqui ©2025</p>
+      <p aria-label="Copyright">VDebliqui ©2025</p>
       <div
         class="footer__list"
         aria-label="Liste des liens utiles"
@@ -288,6 +288,7 @@
         ></a>
       </div>
     </footer>
+    <!-- Modal de contact -->
     <dialog
       class="dialog"
       role="dialog"
@@ -377,6 +378,56 @@
           Copié dans le presse-papiers
         </span>
       </p>
+    </dialog>
+
+    <!-- Modal project -->
+    <dialog
+      class="dialog dialog-project"
+      role="dialog"
+      aria-label="Information du projet"
+      data-project-dialog
+    >
+      <button
+        class="dialog__closeBtn"
+        aria-label="Fermer la fenêtre"
+        data-close-btn
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h2 class="dialog__title" data-project-dialog-title></h2>
+      <hr class="separator" aria-hidden="true" />
+      <h3 class="dialog__subtitle" data-project-dialog-subtitle></h3>
+      <p
+        class="dialog__description"
+        aria-label="Description"
+        data-project-dialog-description
+      ></p>
+      <div class="dialog-project__demo-iframe" data-container-iframe-demo>
+        <span
+          class="desktop-template"
+          data-iframe-demo
+          aria-hidden="true"
+        ></span>
+      </div>
+      <div
+        class="dialog-project__demo-video"
+        data-conainer-video-demo=""
+        aria-hidden="true"
+      ></div>
+      <ul
+        class="card__content__language project-lang"
+        data-project-lang
+        aria-label=""
+      ></ul>
+      <div class="dialog-project__links">
+        <a
+          class="dialog-project__links__link"
+          href=""
+          target="_blank"
+          data-gitHub-repo
+          >GitHub</a
+        >
+      </div>
     </dialog>
   </body>
 </html>

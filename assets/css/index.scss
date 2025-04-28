@@ -3,6 +3,7 @@
 @use "_card";
 @use "_footer";
 @use "_modal";
+@use "_desktop-template";
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -171,6 +172,9 @@ table {
   --button-light: #cea37e;
   --button-dark: #7c5f46;
 
+  --button-secondary-light: #ad7f58;
+  --button-secondary-dark: #ad7f58;
+
   --main-light: #f6eee7;
   --main-dark: #28211d;
 
@@ -232,6 +236,10 @@ table {
   color: var(--color-light);
   background-color: var(--background-light);
 
+  a {
+    color: var(--color-light);
+  }
+
   .switchLanguage {
     color: var(--color-light);
   }
@@ -281,6 +289,7 @@ table {
   }
   .card {
     color: var(--color-light);
+    background: var(--bg-card-content-light);
     &__content {
       background: var(--bg-card-content-light);
       &__language {
@@ -317,11 +326,19 @@ table {
     background-color: var(--bg-card-light);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   }
+  .dialog-project__links__link {
+    color: var(--color-dark);
+    background-color: var(--button-secondary-light);
+  }
 }
 
 [data-theme="dark"] {
   color: var(--color-dark);
   background-color: var(--background-dark);
+
+  a {
+    color: var(--color-dark);
+  }
 
   .switchLanguage {
     color: var(--color-dark);
@@ -406,6 +423,11 @@ table {
     border: 1px solid var(--color-dark);
     background-color: var(--bg-card-dark);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .dialog-project__links__link {
+    color: var(--color-light);
+    background-color: var(--button-secondary-dark);
   }
 }
 
