@@ -166,15 +166,20 @@
           À PROPOS
         </h2>
         <hr class="separator" aria-hidden="true" />
-        <p class="section-container__catchphrase" data-about-catchphrase>
-          Développeur front-end junior, je suis spécialisé dans l’intégration
-          Web
-        </p>
-        <ul
-          class="section-container__listSpecialtie"
-          aria-label="Liste des spécialités"
-          data-about-specialties
-        ></ul>
+        <div class="section-container__about">
+          <p
+            class="section-container__about__catchphrase"
+            data-about-catchphrase
+          >
+            Développeur front-end junior, je suis spécialisé dans l’intégration
+            Web
+          </p>
+          <ul
+            class="section-container__about__listSpecialtie"
+            aria-label="Liste des spécialités"
+            data-about-specialties
+          ></ul>
+        </div>
       </section>
       <section
         class="section-container bg-darken"
@@ -190,76 +195,18 @@
         </h2>
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__skills">
-          <h3 class="section-container__skills__title" data-language-label>
-            Langages
-          </h3>
-          <ul
-            class="section-container__skills__list"
-            aria-label="Liste des langages"
-            data-language-list
+          <p
+            class="section-container__skills__catchphrase"
+            data-skills-catchphrase
           >
-            <li aria-label="HTML 5" class="logo">
-              <img
-                src="assets/image/logo/html.svg"
-                alt="HTML 5"
-                aria-hidden="true"
-              />
-            </li>
-            <li aria-label="CSS 3" class="logo">
-              <img
-                src="assets/image/logo/css.svg"
-                alt="CSS 3"
-                aria-hidden="true"
-              />
-            </li>
-            <li aria-label="JavaScript" class="logo">
-              <img
-                src="assets/image/logo/javaScript.svg"
-                alt="JavaScript"
-                aria-hidden="true"
-              />
-            </li>
-            <li aria-label="SCSS" class="logo">
-              <img
-                src="assets/image/logo/sass.svg"
-                alt="Sass"
-                aria-hidden="true"
-              />
-            </li>
-          </ul>
-          <h3 class="section-container__skills__title" data-tool-label>
-            Outils
-          </h3>
-          <ul
-            class="section-container__skills__list"
-            aria-label="Liste des outils"
-            data-tool-list
-          >
-            <li aria-label="GitHub" class="logo">
-              <i class="fa-brands fa-github"></i>
-            </li>
-            <li aria-label="React" class="logo">
-              <img
-                src="assets/image/logo/react.svg"
-                alt="React"
-                aria-hidden="true"
-              />
-            </li>
-            <li aria-label="Figma" class="logo">
-              <img
-                src="assets/image/logo/figma.svg"
-                alt="Figma"
-                aria-hidden="true"
-              />
-            </li>
-            <li aria-label="Redux Tools Kit" class="logo">
-              <img
-                src="assets/image/logo/redux.svg"
-                alt="Redux"
-                aria-hidden="true"
-              />
-            </li>
-          </ul>
+            Créer des expériences web performantes, accessibles et élégantes est
+            au cœur de ma démarche.
+          </p>
+          <div
+            class="section-container__skills__grid"
+            aria-label="Liste des compétences"
+            data-skills-card-grid
+          ></div>
         </div>
       </section>
     </main>
