@@ -16,9 +16,6 @@ const traduction = {
         altPictureProfile: "Photo de profile de Valentin Debliqui",
         altPictureBackground:
           "Lac gelé au pied d'une chaîne de montagnes enneigées",
-        src: "./assets/image/background-light-1440.webp",
-        srcset:
-          "./assets/image/background-light-1440.webp ./assets/image/background-light-1024.webp ./assets/image/background-light-768.webp ./assets/image/background-light-400.webp",
       },
       about: {
         sectionLabel: "Section à propos",
@@ -212,10 +209,6 @@ const traduction = {
         altPictureProfile: "Valentin Debliqui's profile photo",
         altPictureBackground:
           "View of the urban environment with a sunset in the background",
-        src: "./assets/image/background-dark-1440.webp",
-        srcset: [
-          "./assets/image/background-dark-1440.webp ./assets/image/background-dark-1024.webp ./assetsimage/background-dark-768.webp ./assets/image/background-dark-400.webp",
-        ],
       },
       about: {
         sectionLabel: "About section",

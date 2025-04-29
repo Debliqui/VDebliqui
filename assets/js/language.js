@@ -53,8 +53,6 @@ function updateContent(lang) {
     .setAttribute("alt", bannerSection.altPictureProfile)
   const backgroundElement = document.querySelector("[data-background-src]")
   backgroundElement.setAttribute("alt", bannerSection.altPictureBackground)
-  backgroundElement.setAttribute("src", bannerSection.src)
-  backgroundElement.setAttribute("srcset", bannerSection.srcset)
   document
     .querySelector("[data-link-label]")
     .setAttribute("aria-label", bannerSection.linkLabel)
