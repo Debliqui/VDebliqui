@@ -26,7 +26,7 @@
       content="Spécialisé dans l'implémentation de site Web statique et dynamique."
     />
     <meta property="og:image" content="./assets/image/profile-picture.webp" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -129,7 +129,19 @@
         </div>
         <div class="banner__backgroundImg">
           <img
-            src="./assets/image/background-light.webp"
+            srcset="
+            ./assets/image/background-light-1440.webp
+            ./assets/image/background-light-1024.webp
+            ./assets/image/background-light-768.webp
+            ./assets/image/background-light-400.webp
+            "
+            sizes="
+              (max-width: 400px) 400px,
+              (max-width: 768px) 768px,
+              (max-width: 1024px) 1024px,
+              (max-width: 1440px) 1440px,
+            "
+            src="./assets/image/background-light-1440.webp"
             alt="Lac gelé au pied d'une chaîne de montagnes enneigées"
             class="banner__backgroundImg__src"
             data-background-src
