@@ -574,13 +574,6 @@
     height: 60%;
   }
 }
-.dialog:open {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  transform: scale(1);
-  animation: scaleUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
 .dialog__closeBtn {
   width: 25px;
   background: transparent;
@@ -798,6 +791,14 @@
 }
 .dialog__list__item {
   font-size: 24px;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transform: scale(1);
+  animation: scaleUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 .copy-message {

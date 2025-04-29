@@ -49,6 +49,12 @@ function updateContent(lang) {
   subscribeBtn.textContent = bannerSection.subscribe
   subscribeBtn.setAttribute("aria-label", bannerSection.subscribeLabel)
   document
+    .querySelector("[data-profil-picture]")
+    .setAttribute("alt", bannerSection.altPictureProfile)
+  document
+    .querySelector("[data-background-src]")
+    .setAttribute("alt", bannerSection.altPictureBackground)
+  document
     .querySelector("[data-link-label]")
     .setAttribute("aria-label", bannerSection.linkLabel)
 
@@ -59,7 +65,7 @@ function updateContent(lang) {
     .setAttribute("aria-label", aboutSection.sectionLabel)
   const aboutSectionTitle = document.querySelector("[data-about-title]")
   aboutSectionTitle.textContent = aboutSection.title
-  aboutSectionTitle.setAttribute("aria-labelledby", aboutSection.title)
+  aboutSectionTitle.setAttribute("aria-label", aboutSection.title)
   document.querySelector("[data-about-catchphrase]").textContent =
     aboutSection.catchphrase
 
@@ -256,10 +262,7 @@ function updateContent(lang) {
     .setAttribute("aria-label", content.section.skills.sectionLabel)
   const sectionSkills = document.querySelector("[data-skills-title]")
   sectionSkills.textContent = content.section.skills.title
-  sectionSkills.setAttribute(
-    "aria-labelledby",
-    content.section.skills.sectionLabel
-  )
+  sectionSkills.setAttribute("aria-label", content.section.skills.sectionLabel)
   const catchphrase = document.querySelector("[data-skills-catchphrase]")
   catchphrase.textContent = content.section.skills.catchphrase
   catchphrase.setAttribute(
