@@ -46,9 +46,9 @@
         "url": "!! A changer !!"
       }
     </script>
-    <script type="module" src="./assets/js/theme.js" defer></script>
-    <script type="module" src="./assets/js/language.js" defer></script>
-    <script type="module" src="./assets/js/contactModal.js" defer></script>
+    <script type="module" src="./assets/js/theme.js"></script>
+    <script type="module" src="./assets/js/language.js"></script>
+    <script type="module" src="./assets/js/contactModal.js"></script>
   </head>
   <body>
     <header
@@ -58,14 +58,12 @@
     >
       <select
         name="language"
-        role="menu"
-        id="language-selecte"
         class="switchLanguage"
         aria-label="Sélectionner la langue"
         data-switch-lang
       >
-        <option value="fr" aria-label="Français">FR</option>
-        <option value="en" aria-label="English">EN</option>
+        <option value="fr">FR</option>
+        <option value="en">EN</option>
       </select>
       <button
         data-theme-toggle
@@ -88,7 +86,7 @@
           <h1 class="banner__header__title" itemprop="name" data-title>
             Debliqui Valentin
           </h1>
-          <h2 class="banner__header__job" itemh2rop="jobTitle" data-job>
+          <h2 class="banner__header__job" itemprop="jobTitle" data-job>
             Intégrateur Web
           </h2>
           <p class="banner__header__location" itemprop="address" data-location>
@@ -97,42 +95,42 @@
           <a
             href="https://www.linkedin.com/in/valentin-d-290332112/"
             target="_blank"
-            rel="noopener noreferrer"
             class="linkedinBtn"
             aria-label="Visitez mon profil LinkedIn"
             data-link-label
           >
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            <span class="linkedinBtn__content">
-              <h3 class="linkedinBtn__content__title">linkedin</h3>
-              <p class="linkedinBtn__content__statu" data-statu>En recherche</p>
-            </span>
+            <div class="linkedinBtn__content">
+              <h3 class="linkedinBtn__content__title">
+                linkedin
+                <span class="linkedinBtn__content__statu" data-statu
+                  >En recherche</span
+                >
+              </h3>
+            </div>
           </a>
         </header>
         <div class="banner__middle">
-          <div
-            class="banner__middle__profilePicture"
-            aria-hidden="true"
-            itemprop="image"
-          >
+          <div class="banner__middle__profilePicture" itemprop="image">
             <img
               src="./assets/image/profile-picture.webp"
-              alt=""
+              alt="Photo de profile de Valentin Debliqui"
               class="banner__middle__profilePicture__picture"
+              data-profil-picture
             />
           </div>
           <button
             class="banner__middle__contactBtn"
-            aria-label="Ouvrir le formulaire de contact"
             data-contact-btn
+            aria-label="Me contacter"
           >
             Me contacter +
           </button>
         </div>
-        <div class="banner__backgroundImg" aria-hidden>
+        <div class="banner__backgroundImg">
           <img
             src="./assets/image/background-light.webp"
-            alt=""
+            alt="Lac gelé au pied d'une chaîne de montagnes enneigées"
             class="banner__backgroundImg__src"
             data-background-src
           />
@@ -145,7 +143,7 @@
       >
         <h2
           class="section-container__title"
-          aria-labelledby="À propos"
+          aria-label="À propos"
           data-about-title
         >
           À PROPOS
@@ -170,7 +168,7 @@
       >
         <h2
           class="section-container__title"
-          aria-labelledby="Mes projets"
+          aria-label="Mes projets"
           data-project-title
         >
           MES PROJETS
@@ -190,7 +188,7 @@
       >
         <h2
           class="section-container__title"
-          aria-labelledby="Mes compétences"
+          aria-label="Mes compétences"
           data-skills-title
         >
           COMPÉTENCES
@@ -237,7 +235,6 @@
     <!-- Modal de contact -->
     <dialog
       class="dialog"
-      role="dialog"
       aria-label="Information de contact"
       data-dialog-label
     >
@@ -254,11 +251,7 @@
         Envie d'en savoir plus ? <br />
         Envie que l'on collabore ensemble ?
       </h3>
-      <p
-        class="dialog__description"
-        aria-label="Invitation à la prise de contact"
-        data-dialog-description
-      >
+      <p class="dialog__description" data-dialog-description>
         Contactez-moi, je vous répondrai dans les plus brefs délais !
       </p>
       <p class="dialog__email" aria-label="email" data-email>
@@ -329,7 +322,6 @@
     <!-- Modal project -->
     <dialog
       class="dialog dialog-project"
-      role="dialog"
       aria-label="Information du projet"
       data-project-dialog
     >
@@ -340,14 +332,12 @@
       >
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <h2 class="dialog__title" data-project-dialog-title></h2>
+      <h2 class="dialog__title" data-project-dialog-title>Titre</h2>
       <hr class="separator" aria-hidden="true" />
-      <h3 class="dialog__subtitle" data-project-dialog-subtitle></h3>
-      <p
-        class="dialog__description"
-        aria-label="Description"
-        data-project-dialog-description
-      ></p>
+      <h3 class="dialog__subtitle" data-project-dialog-subtitle>Sous-titre</h3>
+      <p class="dialog__description" data-project-dialog-description>
+        Description
+      </p>
       <div class="dialog-project__demo-iframe" data-container-iframe-demo>
         <span
           class="desktop-template"
