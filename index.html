@@ -128,12 +128,28 @@
           </button>
         </div>
         <div class="banner__backgroundImg">
-          <img
-            src="./assets/image/background-light.webp"
-            alt="Lac gelé au pied d'une chaîne de montagnes enneigées"
-            class="banner__backgroundImg__src"
-            data-background-src
-          />
+          <picture>
+            <source
+              srcset="
+              ./assets/image/background-light-366.webp 399w,
+              ./assets/image/background-light-735.webp 767w,
+              ./assets/image/background-light-975.webp 1023w,
+              ./assets/image/background-light-1280.webp 1439px
+              "
+              type="image/webp"
+              sizes="
+                (min-width: 1439px) 1439px,
+                100vw
+              "
+              data-background-srcset
+            />
+            <img
+              src="./assets/image/background-light-366.webp"
+              alt="Lac gelé au pied d'une chaîne de montagnes enneigées"
+              class="banner__backgroundImg__src"
+              data-background-src
+            />
+          </picture>
         </div>
       </section>
       <section
