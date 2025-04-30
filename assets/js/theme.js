@@ -57,7 +57,7 @@ function updateBackgroundBannerSrc(currentThemeSetting) {
     )
     backgroundBannerSrcset.setAttribute(
       "srcset",
-      "./assets/image/background-light-366.webp 399w, ./assets/image/background-light-735.webp 767w, ./assets/image/background-light-975.webp 1023w, ./assets/image/background-light-1280.webp 1439px"
+      "./assets/image/background-light-366.webp 399w, ./assets/image/background-light-735.webp 767w, ./assets/image/background-light-975.webp 1023w, ./assets/image/background-light-1280.webp 1439w"
     )
   }
 }
