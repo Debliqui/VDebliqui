@@ -227,6 +227,32 @@
   flex-direction: column;
   align-items: center;
 }
+.section-container__projects__filter {
+  display: flex;
+  margin-top: 3rem;
+  gap: 10px;
+}
+.section-container__projects__filter__btn {
+  font-size: 12px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 400px) {
+  .section-container__projects__filter__btn {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-container__projects__filter__btn {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-container__projects__filter__btn {
+    font-size: 18px;
+    padding: 8px 10px;
+  }
+}
 .section-container__projects__grid {
   width: 100%;
   margin-top: 3rem;
@@ -554,6 +580,7 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   transform: scale(0);
+  scrollbar-width: thin;
 }
 @media screen and (min-width: 450px) {
   .dialog {
@@ -969,8 +996,6 @@ dialog[open] {
   height: 400px;
   border: 12px solid black;
   border-radius: 30px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 @media screen and (min-width: 400px) {
   .desktop-template {
@@ -992,6 +1017,11 @@ dialog[open] {
 .desktop-template__iframe {
   width: auto;
   height: 100%;
+}
+@media (min-width: 450px) {
+  .desktop-template__iframe {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -1202,11 +1232,17 @@ table {
 [data-theme=light] .main-content {
   background-color: var(--main-light);
 }
+[data-theme=light] .section-container__projects__filter__btn {
+  background: var(--background-light);
+}
 [data-theme=light] .section-container__skills__grid__card {
   background: var(--background-light);
 }
 [data-theme=light] .section-container__skills__grid__card__header i {
   color: #4b5563;
+}
+[data-theme=light] .selected {
+  background: var(--button-light);
 }
 [data-theme=light] .banner__middle__profilePicture__picture {
   border: 2px solid #dcbc9f;
@@ -1283,11 +1319,18 @@ table {
 [data-theme=dark] .main-content {
   background-color: var(--main-dark);
 }
+[data-theme=dark] .section-container__projects__filter__btn {
+  background: var(--color-dark);
+}
 [data-theme=dark] .section-container__skills__grid__card {
   background: var(--background-dark);
 }
 [data-theme=dark] .section-container__skills__grid__card__header i {
   color: #e5e7eb;
+}
+[data-theme=dark] .selected {
+  color: var(--color-dark);
+  background-color: var(--button-dark);
 }
 [data-theme=dark] .banner__middle__profilePicture__picture {
   border: 2px solid #614a39;

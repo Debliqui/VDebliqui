@@ -258,6 +258,13 @@ table {
   }
 
   .section-container {
+    &__projects {
+      &__filter {
+        &__btn {
+          background: var(--background-light);
+        }
+      }
+    }
     &__skills {
       &__grid {
         &__card {
@@ -270,6 +277,10 @@ table {
         }
       }
     }
+  }
+
+  .selected {
+    background: var(--button-light);
   }
 
   .banner__middle__profilePicture__picture {
@@ -359,6 +370,13 @@ table {
   }
 
   .section-container {
+    &__projects {
+      &__filter {
+        &__btn {
+          background: var(--color-dark);
+        }
+      }
+    }
     &__skills {
       &__grid {
         &__card {
@@ -371,6 +389,11 @@ table {
         }
       }
     }
+  }
+
+  .selected {
+    color: var(--color-dark);
+    background-color: var(--button-dark);
   }
 
   .banner__middle__profilePicture__picture {
