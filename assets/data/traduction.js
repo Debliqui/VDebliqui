@@ -36,6 +36,21 @@ const traduction = {
         title: "MES PROJETS",
         description:
           "Voici quelques projets sur lesquels j'ai travaillé. Vous pouvez les consulter sur mon GitHub.",
+        allCategory: "Tous",
+        categories: [
+          {
+            categoryId: "1",
+            name: "HTML",
+          },
+          {
+            categoryId: "2",
+            name: "JavaScript",
+          },
+          {
+            categoryId: "3",
+            name: "React",
+          },
+        ],
         label: {
           projectLabel: "Projet",
           objectifLabel: "Objectif",
@@ -51,6 +66,7 @@ const traduction = {
         listProject: [
           {
             id: "1",
+            categoryId: "1",
             name: "Ohmyfood",
             subtitle: "Site de réservation en ligne de menus gastronomiques.",
             description:
@@ -66,6 +82,7 @@ const traduction = {
           },
           {
             id: "2",
+            categoryId: "2",
             name: "Portfolio S.Bluel",
             subtitle: "Portfolio d'une architecte d'intérieur.",
             description:
@@ -81,6 +98,7 @@ const traduction = {
           },
           {
             id: "3",
+            categoryId: "2",
             name: "Portfolio N.Carducci",
             subtitle: "Site vitrine de la photographe Nina Carducci",
             description:
@@ -94,6 +112,7 @@ const traduction = {
           },
           {
             id: "4",
+            categoryId: "3",
             name: "Kasa",
             subtitle:
               "Création d'une application web de location immobilière avec React",
@@ -229,6 +248,21 @@ const traduction = {
         title: "MY PROJECTS",
         description:
           "Here are some projects I have worked on. You can check them out on my GitHub.",
+        allCategory: "All",
+        categories: [
+          {
+            categoryId: "1",
+            name: "HTML",
+          },
+          {
+            categoryId: "2",
+            name: "JavaScript",
+          },
+          {
+            categoryId: "3",
+            name: "React",
+          },
+        ],
         label: {
           projectLabel: "Project",
           objectifLabel: "Objective",
@@ -244,6 +278,7 @@ const traduction = {
         listProject: [
           {
             id: "1",
+            categoryId: "1",
             name: "Ohmyfood",
             subtitle: "Online booking site for gourmet menus.",
             description:
@@ -258,6 +293,7 @@ const traduction = {
           },
           {
             id: "2",
+            categoryId: "2",
             name: "Portfolio S.Bluel",
             subtitle: "Portfolio of an interior architect.",
             description:
@@ -273,6 +309,7 @@ const traduction = {
           },
           {
             id: "3",
+            categoryId: "2",
             name: "Portfolio N.Carducci",
             subtitle: "Showcase site of photographer Nina Carducci",
             description:
@@ -286,6 +323,7 @@ const traduction = {
           },
           {
             id: "4",
+            categoryId: "3",
             name: "Kasa",
             subtitle:
               "Creation of a web application for real estate rental with React",

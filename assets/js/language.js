@@ -1,6 +1,6 @@
 import traduction from "../data/traduction.js"
 
-const defaultLang = document.documentElement.lang
+const defaultLang = document.documentElement.lang || "fr"
 const switchBtnLang = document.querySelector("[data-switch-lang]")
 const localStorageLang = localStorage.getItem("language")
 
@@ -88,10 +88,60 @@ function updateContent(lang) {
   document.querySelector("[data-project-title]").textContent =
     content.section.project.title
 
+  // Project filter
+  const filterContainer = document.querySelector("[data-projects-filter]")
+
+  filterContainer.innerHTML = ""
+  const allCategoriesBtn = document.createElement("button")
+  allCategoriesBtn.setAttribute("data-category-id", "all")
+  allCategoriesBtn.classList.add(
+    "section-container__projects__filter__btn",
+    "selected"
+  )
+  allCategoriesBtn.textContent = content.section.project.allCategory
+  filterContainer.appendChild(allCategoriesBtn)
+
+  const categoriesList = content.section.project.categories
+  categoriesList.map((category) => {
+    const categoryBtn = document.createElement("button")
+    categoryBtn.setAttribute("data-category-id", category.categoryId)
+    categoryBtn.classList.add("section-container__projects__filter__btn")
+    categoryBtn.textContent = category.name
+    filterContainer.appendChild(categoryBtn)
+  })
+
+  //Addition of an interactive filter that displays or hides cards according to the selected category and updates their visual status
+  document
+    .querySelectorAll(".section-container__projects__filter__btn")
+    .forEach((filterBtn) => {
+      filterBtn.addEventListener("click", () => {
+        const categoryId = filterBtn.dataset.categoryId
+        const projectsCard = document.querySelectorAll(".project-card")
+
+        document
+          .querySelectorAll(".section-container__projects__filter__btn")
+          .forEach((btn) => btn.classList.remove("selected"))
+
+        filterBtn.classList.add("selected")
+
+        projectsCard.forEach((projectCard) => {
+          if (
+            projectCard.dataset.categoryId === categoryId ||
+            categoryId === "all"
+          ) {
+            projectCard.style.display = ""
+          } else {
+            projectCard.style.display = "none"
+          }
+        })
+      })
+    })
+
+  // Project Card
   projectSection.innerHTML = ""
   projects.forEach((project) => {
     const projectCard = `
-        <div class="project-card">
+        <div class="project-card" data-category-id="${project.categoryId}">
             <article class="card" aria-label="${
               content.section.project.label.projectLabel
             } ${project.name}">
@@ -141,6 +191,7 @@ function updateContent(lang) {
     projectSection.innerHTML += projectCard
   })
 
+  // Project modal
   const dialog = document.querySelector("[data-project-dialog]")
   dialog.setAttribute("aria-label", content.section.project.label.dialogLabel)
   document.querySelectorAll("[data-project-id]").forEach((btn) => {
@@ -245,7 +296,9 @@ function updateContent(lang) {
 
   function clearData() {
     const linkDemo = document.querySelector("[data-link-demo]")
-    linkDemo.remove()
+    if (linkDemo) {
+      linkDemo.remove()
+    }
     const linkGith = document.querySelector("[data-gitHub-repo]")
     linkGith.href = ""
     linkGith.setAttribute("aria-label", "")
