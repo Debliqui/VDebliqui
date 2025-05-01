@@ -169,7 +169,10 @@ function updateContent(lang) {
                 <img
                   src="${project.src}"
                   alt="Demo ${project.name}"
-                  class="card__img-container__picture"/>
+                  class="card__img-container__picture"
+                  width="300" height="200"
+                  loading="lazy"
+                />
                 <div class="card__img-container__overlay">
                   <p>${content.section.project.label.detailsBtnLabel}</p>
                 </div>
