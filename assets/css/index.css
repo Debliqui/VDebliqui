@@ -112,10 +112,22 @@
   }
 }
 .banner__middle__profilePicture__picture {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  width: 76px;
+  height: 76px;
+}
+@media screen and (min-width: 400px) {
+  .banner__middle__profilePicture__picture {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__middle__profilePicture__picture {
+    width: 140px;
+    height: 140px;
+  }
 }
 .banner__middle__contactBtn {
   padding: 4px 6px;
@@ -487,6 +499,7 @@
   display: flex;
 }
 .card__img-container__picture {
+  aspect-ratio: 16/9;
   width: 100%;
   height: 100%;
   object-fit: cover;

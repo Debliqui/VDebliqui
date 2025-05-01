@@ -96,10 +96,18 @@
         height: 140px;
       }
       &__picture {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
         border-radius: 50%;
+        width: 76px;
+        height: 76px;
+        @include screen_tiny {
+          width: 110px;
+          height: 110px;
+        }
+        @include screen_mobile {
+          width: 140px;
+          height: 140px;
+        }
       }
     }
     &__contactBtn {
