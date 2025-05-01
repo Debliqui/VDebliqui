@@ -280,7 +280,7 @@ table {
   }
 
   .selected {
-    background: var(--button-light);
+    background-color: var(--button-light);
   }
 
   .banner__middle__profilePicture__picture {
@@ -373,7 +373,7 @@ table {
     &__projects {
       &__filter {
         &__btn {
-          background: var(--color-dark);
+          background-color: var(--color-dark);
         }
       }
     }
@@ -582,35 +582,32 @@ button:hover {
       font-size: 26px;
     }
   }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    &__title {
-      font-family: var(--title-font);
-      font-size: 14px;
-      @include screen_tiny {
-        font-size: 16px;
-      }
-      @include screen_mobile {
-        font-size: 18px;
-      }
-      @include screen_tablet {
-        font-size: 20px;
-      }
+  &__title {
+    font-family: var(--title-font);
+    font-size: 14px;
+    @include screen_tiny {
+      font-size: 16px;
     }
-    &__statu {
-      font-family: var(--body-font);
-      font-size: 14px;
-      font-weight: 300;
-      @include screen_tiny {
-        font-size: 16px;
-      }
-      @include screen_mobile {
-        font-size: 18px;
-      }
-      @include screen_tablet {
-        font-size: 20px;
-      }
+    @include screen_mobile {
+      font-size: 18px;
+    }
+    @include screen_tablet {
+      font-size: 20px;
+    }
+  }
+  &__statu {
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: underline;
+    @include screen_tiny {
+      font-size: 16px;
+    }
+    @include screen_mobile {
+      font-size: 18px;
+    }
+    @include screen_tablet {
+      font-size: 20px;
     }
   }
 }

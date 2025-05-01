@@ -60,27 +60,30 @@
     align-items: center;
     &__filter {
       display: flex;
-      margin-top: 3rem;
+      margin-top: 1rem;
       gap: 10px;
       &__btn {
-        font-size: 12px;
-        border-radius: 10px;
+        font-size: 14px;
+        border-radius: 14px;
+        padding: 2px 4px;
         @include screen_tiny {
-          font-size: 14px;
+          border-radius: 16px;
+          font-size: 16px;
+          padding: 4px 6px;
         }
         @include screen_mobile {
-          font-size: 16px;
-          padding: 6px 8px;
+          border-radius: 18px;
+          font-size: 18px;
+          padding: 6px 10px;
         }
         @include screen_tablet {
-          font-size: 18px;
-          padding: 8px 10px;
+          border-radius: 20px;
+          padding: 8px 12px;
         }
       }
     }
     &__grid {
       width: 100%;
-      margin-top: 3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -88,6 +91,19 @@
       @include screen_mobile {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+    &__filter,
+    &__grid {
+      margin-top: 1rem;
+      @include screen_tiny {
+        margin-top: 1.5rem;
+      }
+      @include screen_mobile {
+        margin-top: 2rem;
+      }
+      @include screen_tablet {
+        margin-top: 2.5rem;
       }
     }
   }
