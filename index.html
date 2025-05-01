@@ -60,6 +60,7 @@
         name="language"
         class="switchLanguage"
         aria-label="Sélectionner la langue"
+        title="Choisissez votre langue"
         data-switch-lang
       >
         <option value="fr">FR</option>
@@ -96,18 +97,13 @@
             href="https://www.linkedin.com/in/valentin-d-290332112/"
             target="_blank"
             class="linkedinBtn"
-            aria-label="Visitez mon profil LinkedIn"
             data-link-label
           >
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            <div class="linkedinBtn__content">
-              <h3 class="linkedinBtn__content__title">
-                linkedin
-                <span class="linkedinBtn__content__statu" data-statu
-                  >En recherche</span
-                >
-              </h3>
-            </div>
+            <h3 class="linkedinBtn__title">
+              linkedin
+              <span class="linkedinBtn__statu" data-statu>En recherche</span>
+            </h3>
           </a>
         </header>
         <div class="banner__middle">
@@ -241,16 +237,22 @@
           class="footer__list__item"
           aria-label="Visitez mon profil GitHub"
           data-gitHub-label
-          ><i class="fa-brands fa-github"></i
-        ></a>
+          ><i class="fa-brands fa-github"></i>
+          <span class="sr-only" data-gitHub-label-span
+            >Visitez mon profil GitHub</span
+          >
+        </a>
         <a
           href="https://www.linkedin.com/in/valentin-d-290332112/"
           target="_blank"
           class="footer__list__item"
           aria-label="Visitez mon profil LinkedIn"
           data-linkedin-label
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
+          ><i class="fa-brands fa-linkedin"></i>
+          <span class="sr-only" data-linkedin-label-span
+            >Visitez mon profil LinkedIn</span
+          >
+        </a>
       </div>
     </footer>
     <!-- Modal de contact -->
@@ -315,6 +317,9 @@
           data-gitHub-label
         >
           <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span class="sr-only" data-gitHub-label-span
+            >Visitez mon profil GitHub</span
+          >
         </a>
         <a
           href="https://www.linkedin.com/in/valentin-d-290332112/"
@@ -324,6 +329,9 @@
           data-linkedin-label
         >
           <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <span class="sr-only" data-linkedin-label-span
+            >Visitez mon profil LinkedIn</span
+          >
         </a>
       </div>
       <p
@@ -360,17 +368,9 @@
         Description
       </p>
       <div class="dialog-project__demo-iframe" data-container-iframe-demo>
-        <span
-          class="desktop-template"
-          data-iframe-demo
-          aria-hidden="true"
-        ></span>
+        <span class="desktop-template" data-iframe-demo></span>
       </div>
-      <div
-        class="dialog-project__demo-video"
-        data-conainer-video-demo=""
-        aria-hidden="true"
-      ></div>
+      <div class="dialog-project__demo-video" data-conainer-video-demo=""></div>
       <ul
         class="card__content__language project-lang"
         data-project-lang

@@ -2,6 +2,7 @@ const traduction = {
   fr: {
     headerLablel: "Réglages du thème et de la langue",
     menuLabel: "Sélectionner la langue",
+    selectTitle: "Choisissez votre langue",
     themeLabel: "Passer en mode sombre",
     mainLabel: "Contenu principal",
     section: {
@@ -12,7 +13,6 @@ const traduction = {
         statu: "En recherche",
         subscribeLabel: "Me contacter",
         subscribe: "Me contacter +",
-        linkLabel: "Visitez mon profil LinkedIn",
         altPictureProfile: "Photo de profile de Valentin Debliqui",
         altPictureBackground:
           "Lac gelé au pied d'une chaîne de montagnes enneigées",
@@ -56,7 +56,6 @@ const traduction = {
           objectifLabel: "Objectif",
           detailsLabel: "Voir les détails du projet",
           langTitle: "Langages utilisés",
-          linkLabel: "Lien vers la démonstration de ",
           linkGitLabel: "Lien vers le GitHub de ",
           linkGitBtn: "GitHub",
           linkDemoBtn: "Voir le site",
@@ -214,6 +213,7 @@ const traduction = {
   en: {
     headerLablel: "Theme and language settings",
     menuLabel: "Select language",
+    selectTitle: "Choose your language",
     themeLabel: "Switch to dark mode",
     mainLabel: "Main content",
     section: {
@@ -224,7 +224,6 @@ const traduction = {
         statu: "Open to work",
         subscribeLabel: "Contact me",
         subscribe: "Contact me +",
-        linkLabel: "Visit my LinkedIn profile",
         altPictureProfile: "Valentin Debliqui's profile photo",
         altPictureBackground:
           "View of the urban environment with a sunset in the background",
@@ -268,7 +267,6 @@ const traduction = {
           objectifLabel: "Objective",
           detailsLabel: "See details of the project",
           langTitle: "Languages used",
-          linkLabel: "Link to the demonstration of ",
           linkGitLabel: "Link to the GitHub of ",
           linkGitBtn: "GitHub",
           linkDemoBtn: "Visit the site",

@@ -27,9 +27,9 @@ function updateContent(lang) {
   document
     .querySelector("[data-header-label]")
     .setAttribute("aria-label", content.headerLablel)
-  document
-    .querySelector("[data-switch-lang]")
-    .setAttribute("aria-label", content.menuLabel)
+  const selectEl = document.querySelector("[data-switch-lang]")
+  selectEl.setAttribute("aria-label", content.menuLabel)
+  selectEl.title = content.selectTitle
   document
     .querySelector("[data-theme-label]")
     .setAttribute("aria-label", content.themeLabel)
@@ -53,9 +53,6 @@ function updateContent(lang) {
     .setAttribute("alt", bannerSection.altPictureProfile)
   const backgroundElement = document.querySelector("[data-background-src]")
   backgroundElement.setAttribute("alt", bannerSection.altPictureBackground)
-  document
-    .querySelector("[data-link-label]")
-    .setAttribute("aria-label", bannerSection.linkLabel)
 
   // Update about section
   const aboutSection = content.section.about
@@ -132,6 +129,7 @@ function updateContent(lang) {
             projectCard.style.display = ""
           } else {
             projectCard.style.display = "none"
+            projectCard.setAttribute("visibily", "hidden")
           }
         })
       })
@@ -230,6 +228,7 @@ function updateContent(lang) {
           iframeContent.setAttribute("src", project.link)
           iframeContent.classList.add("desktop-template__iframe")
           iframeContent.setAttribute("aria-label", project.name)
+          iframeContent.title = project.name
           iframeContent.setAttribute("data-iframe-content", "")
           iframeDemo.appendChild(iframeContent)
         }
@@ -251,12 +250,8 @@ function updateContent(lang) {
           "aria-label",
           content.section.project.label.langTitle
         )
-        const linkGith = document.querySelector("[data-gitHub-repo]")
-        linkGith.href = project.linkGit
-        linkGith.setAttribute(
-          "aria-label",
-          `${content.section.project.label.linkGitLabel} ${project.name}`
-        )
+        const linkGitH = document.querySelector("[data-gitHub-repo]")
+        linkGitH.href = project.linkGit
         if (project.link) {
           const linkDemo = document.createElement("a")
           linkDemo.textContent = content.section.project.label.linkDemoBtn
@@ -264,11 +259,7 @@ function updateContent(lang) {
           linkDemo.href = project.link
           linkDemo.target = "_blank"
           linkDemo.setAttribute("data-link-demo", "")
-          linkDemo.setAttribute(
-            "aria-label",
-            `${content.section.project.label.linkLabel} ${project.name}`
-          )
-          linkGith.insertAdjacentElement("afterend", linkDemo)
+          linkGitH.insertAdjacentElement("afterend", linkDemo)
         } else {
           const linkDemo = document.querySelector("[data-link-demo]")
           if (linkDemo) {
@@ -301,7 +292,6 @@ function updateContent(lang) {
     }
     const linkGith = document.querySelector("[data-gitHub-repo]")
     linkGith.href = ""
-    linkGith.setAttribute("aria-label", "")
     const imgElement = document.querySelector("[data-demo-img]")
     if (imgElement) {
       imgElement.remove()
@@ -372,10 +362,16 @@ function updateContent(lang) {
       element.setAttribute("aria-label", content.footer.linkedinLabel)
     )
   document
+    .querySelectorAll("[data-linkedin-label-span]")
+    .forEach((element) => (element.textContent = content.footer.linkedinLabel))
+  document
     .querySelectorAll("[data-github-label]")
     .forEach((element) =>
       element.setAttribute("aria-label", content.footer.githubLabel)
     )
+  document
+    .querySelectorAll("[data-gitHub-label-span]")
+    .forEach((element) => (element.textContent = content.footer.githubLabel))
 
   // Update contact modal
   document
