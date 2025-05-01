@@ -261,7 +261,8 @@ table {
     &__projects {
       &__filter {
         &__btn {
-          background: var(--background-light);
+          background-color: var(--background-light);
+          color: var(--color-light);
         }
       }
     }
@@ -374,6 +375,7 @@ table {
       &__filter {
         &__btn {
           background-color: var(--color-dark);
+          color: var(--color-light);
         }
       }
     }

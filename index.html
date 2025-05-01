@@ -39,16 +39,18 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Valentin Debliqui",
-        "url": "https://debliqui.github.io/VDebliqui/"
+        "url": "https://debliqui.github.io/VDebliqui/",
+        "email": "debliqui.valentin@outlook.com",
+        "image": "./assets/image/profile-picture.webp"
       }
     </script>
     <script
       src="https://kit.fontawesome.com/687ad65565.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./assets/js/theme.js"></script>
-    <script type="module" src="./assets/js/language.js"></script>
-    <script type="module" src="./assets/js/contactModal.js"></script>
+    <script type="module" src="./assets/js/theme.min.js"></script>
+    <script type="module" src="./assets/js/language.min.js"></script>
+    <script type="module" src="./assets/js/contactModal.min.js"></script>
   </head>
   <body>
     <header
@@ -56,10 +58,11 @@
       aria-label="Réglages du thème et de la langue"
       data-header-label
     >
+      <h1 class="sr-only">VDebliqui</h1>
       <select
+        id="language"
         name="language"
         class="switchLanguage"
-        aria-label="Sélectionner la langue"
         title="Choisissez votre langue"
         data-switch-lang
       >
@@ -84,12 +87,12 @@
     >
       <section class="banner" aria-label="Introduction">
         <header class="banner__header" aria-label="Information profile">
-          <h1 class="banner__header__title" itemprop="name" data-title>
+          <h2 class="banner__header__title" itemprop="name" data-title>
             Debliqui Valentin
-          </h1>
-          <h2 class="banner__header__job" itemprop="jobTitle" data-job>
-            Intégrateur Web
           </h2>
+          <h3 class="banner__header__job" itemprop="jobTitle" data-job>
+            Intégrateur Web
+          </h3>
           <p class="banner__header__location" itemprop="address" data-location>
             Montréal, Québec, Canada
           </p>
@@ -100,10 +103,10 @@
             data-link-label
           >
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-            <h3 class="linkedinBtn__title">
+            <p class="linkedinBtn__title">
               linkedin
               <span class="linkedinBtn__statu" data-statu>En recherche</span>
-            </h3>
+            </p>
           </a>
         </header>
         <div class="banner__middle">
@@ -262,6 +265,8 @@
       class="dialog"
       aria-label="Information de contact"
       data-dialog-label
+      itemscope
+      itemtype="http://schema.org/Person"
     >
       <button
         class="dialog__closeBtn"
@@ -279,7 +284,7 @@
       <p class="dialog__description" data-dialog-description>
         Contactez-moi, je vous répondrai dans les plus brefs délais !
       </p>
-      <p class="dialog__email" aria-label="email" data-email>
+      <p class="dialog__email" aria-label="email" data-email itemprop="email">
         debliqui.valentin@outlook.com
       </p>
       <div class="dialog__contact">

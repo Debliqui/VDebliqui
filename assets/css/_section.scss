@@ -66,6 +66,7 @@
         font-size: 14px;
         border-radius: 14px;
         padding: 2px 4px;
+        min-width: 50px;
         @include screen_tiny {
           border-radius: 16px;
           font-size: 16px;
