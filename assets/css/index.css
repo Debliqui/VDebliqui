@@ -248,6 +248,7 @@
   font-size: 14px;
   border-radius: 14px;
   padding: 2px 4px;
+  min-width: 50px;
 }
 @media screen and (min-width: 400px) {
   .section-container__projects__filter__btn {
@@ -1267,7 +1268,8 @@ table {
   background-color: var(--main-light);
 }
 [data-theme=light] .section-container__projects__filter__btn {
-  background: var(--background-light);
+  background-color: var(--background-light);
+  color: var(--color-light);
 }
 [data-theme=light] .section-container__skills__grid__card {
   background: var(--background-light);
@@ -1355,6 +1357,7 @@ table {
 }
 [data-theme=dark] .section-container__projects__filter__btn {
   background-color: var(--color-dark);
+  color: var(--color-light);
 }
 [data-theme=dark] .section-container__skills__grid__card {
   background: var(--background-dark);

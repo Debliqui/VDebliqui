@@ -28,7 +28,6 @@ function updateContent(lang) {
     .querySelector("[data-header-label]")
     .setAttribute("aria-label", content.headerLablel)
   const selectEl = document.querySelector("[data-switch-lang]")
-  selectEl.setAttribute("aria-label", content.menuLabel)
   selectEl.title = content.selectTitle
   document
     .querySelector("[data-theme-label]")
