@@ -301,66 +301,129 @@
     margin-top: 2.5rem;
   }
 }
-.section-container__skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-.section-container__skills__grid__card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-.section-container__skills__grid__card:hover {
-  transform: scale(1.02);
-  box-shadow: var(--card-hover-shadow);
-}
-.section-container__skills__grid__card__header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.section-container__skills__grid__card__header i {
-  font-size: 18px;
-}
-.section-container__skills__grid__card__title {
+.section-container__degrees__title {
   font-family: var(--title-font);
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
+  margin-top: 2rem;
 }
 @media screen and (min-width: 400px) {
-  .section-container__skills__grid__card__title {
+  .section-container__degrees__title {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
-  .section-container__skills__grid__card__title {
+  .section-container__degrees__title {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .section-container__skills__grid__card__title {
+  .section-container__degrees__title {
+    font-size: 22px;
+  }
+}
+.section-container__degrees__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.section-container__degrees__grid__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.section-container__degrees__grid__card:hover {
+  transform: scale(1);
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 6px, rgba(0, 0, 0, 0.1) 0px 1px 3px;
+}
+.section-container__degrees__grid__card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-container__degrees__grid__card__header i {
+  font-size: 18px;
+}
+.section-container__degrees__grid__card__title {
+  font-family: var(--title-font);
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 400px) {
+  .section-container__degrees__grid__card__title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-container__degrees__grid__card__title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-container__degrees__grid__card__title {
     font-size: 24px;
   }
 }
-.section-container__skills__grid__card__list {
+.section-container__degrees__grid__card__type, .section-container__degrees__grid__card__skills {
+  font-family: var(--body-font);
+  font-size: 14px;
+}
+@media screen and (min-width: 400px) {
+  .section-container__degrees__grid__card__type, .section-container__degrees__grid__card__skills {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-container__degrees__grid__card__type, .section-container__degrees__grid__card__skills {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-container__degrees__grid__card__type, .section-container__degrees__grid__card__skills {
+    font-size: 20px;
+  }
+}
+.section-container__degrees__grid__card__type {
+  font-weight: 500;
+}
+.section-container__degrees__grid__card__skills {
+  font-weight: 400;
+}
+.section-container__degrees__grid__card__list {
   list-style: none;
   padding: 0;
 }
-.section-container__skills__grid__card__list li {
+.section-container__degrees__grid__card__list li {
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   font-family: var(--body-font);
   font-weight: 400;
+  font-family: var(--title-font);
+  font-size: 14px;
 }
-.section-container__skills__grid__card:hover {
-  transform: translateY(-5px);
+@media screen and (min-width: 400px) {
+  .section-container__degrees__grid__card__list li {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-container__degrees__grid__card__list li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-container__degrees__grid__card__list li {
+    font-size: 20px;
+  }
+}
+.section-container__degrees__grid__card:hover {
+  transform: translateY(-10px);
 }
 
 .catchphrase {
@@ -1271,10 +1334,13 @@ table {
   background-color: var(--background-light);
   color: var(--color-light);
 }
-[data-theme=light] .section-container__skills__grid__card {
+[data-theme=light] .section-container__degrees__grid__card {
   background: var(--background-light);
 }
-[data-theme=light] .section-container__skills__grid__card__header i {
+[data-theme=light] .section-container__degrees__grid__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+[data-theme=light] .section-container__degrees__grid__card__header i {
   color: #4b5563;
 }
 [data-theme=light] .selected {
@@ -1359,10 +1425,10 @@ table {
   background-color: var(--color-dark);
   color: var(--color-light);
 }
-[data-theme=dark] .section-container__skills__grid__card {
+[data-theme=dark] .section-container__degrees__grid__card {
   background: var(--background-dark);
 }
-[data-theme=dark] .section-container__skills__grid__card__header i {
+[data-theme=dark] .section-container__degrees__grid__card__header i {
   color: #e5e7eb;
 }
 [data-theme=dark] .selected {

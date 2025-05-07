@@ -300,43 +300,44 @@ function updateContent(lang) {
     }
   }
 
-  // Update skills section
+  // Update degrees section
   document
-    .querySelector("[data-skills-section]")
-    .setAttribute("aria-label", content.section.skills.sectionLabel)
-  const sectionSkills = document.querySelector("[data-skills-title]")
-  sectionSkills.textContent = content.section.skills.title
-  sectionSkills.setAttribute("aria-label", content.section.skills.sectionLabel)
-  const catchphrase = document.querySelector("[data-skills-catchphrase]")
-  catchphrase.textContent = content.section.skills.catchphrase
-  catchphrase.setAttribute(
-    "aria-label",
-    content.section.skills.catchphraseLabel
+    .querySelector("[data-degrees-section]")
+    .setAttribute("aria-label", content.section.degrees.sectionLabel)
+  const sectionDegrees = document.querySelector("[data-degrees-title]")
+  sectionDegrees.textContent = content.section.degrees.title
+  const catchphrase = document.querySelector("[data-degrees-catchphrase]")
+  catchphrase.textContent = content.section.degrees.catchphrase
+  const cardGridDegrees = document.querySelector("[data-degrees-card-grid]")
+  const cardGridDegreesTitle = document.querySelector(
+    "[data-degrees-card-grid-title]"
   )
-  const cardGridSkills = document.querySelector("[data-skills-card-grid]")
-  cardGridSkills.setAttribute("aria-label", content.section.skills.gridLabel)
-  const listArticles = content.section.skills.article
-  cardGridSkills.innerHTML = ""
+  cardGridDegreesTitle.textContent = content.section.degrees.gridLabel
+  const listArticles = content.section.degrees.article
+  cardGridDegrees.innerHTML = ""
   listArticles.forEach((article) => {
     const gridCards = `
      <article
-            class="section-container__skills__grid__card"
+            class="section-container__degrees__grid__card"
             aria-label="${article.cardLabel}"
-            data-skills-card
+            data-degrees-card
           >
-            <header class="section-container__skills__grid__card__header">
-              ${article.icon}
-              <h3
-                class="section-container__skills__grid__card__title"
-                data-skills-card-title
+              <h4
+                class="section-container__degrees__grid__card__title"
+                data-degrees-card-title
               >
-                ${article.title}
-              </h3>
-            </header>
+              ${article.icon} ${article.title}
+              </h4>
+              <p class="section-container__degrees__grid__card__type">Type : ${
+                article.type
+              }</p>
+              <p class="section-container__degrees__grid__card__skills">${
+                article.skillsLabel
+              }</p>
             <ul
-              class="section-container__skills__grid__card__list"
+              class="section-container__degrees__grid__card__list"
               aria-label="${article.listLabel}"
-              data-skills-card-list
+              data-degrees-card-list
             >
               ${article.list
                 .map(
@@ -346,7 +347,7 @@ function updateContent(lang) {
             </ul>
           </article>
   `
-    cardGridSkills.innerHTML += gridCards
+    cardGridDegrees.innerHTML += gridCards
   })
 
   // Update footer

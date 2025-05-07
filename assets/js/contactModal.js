@@ -24,7 +24,7 @@ dialog.addEventListener("click", (event) => {
 })
 
 copyBtn.addEventListener("click", () => {
-  navigator.clipboard.writeText(dataEmail.textContent).then(() => {
+  navigator.clipboard.writeText(dataEmail.textContent.trim()).then(() => {
     copyMessage.classList.add("active")
     copyMessage.setAttribute("aria-hidden", "false")
     setTimeout(() => {

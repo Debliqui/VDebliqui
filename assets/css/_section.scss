@@ -109,24 +109,40 @@
     }
   }
 
-  &__skills {
+  &__degrees {
+    &__title {
+      font-family: var(--title-font);
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 2rem;
+      @include screen_tiny {
+        font-size: 18px;
+      }
+      @include screen_mobile {
+        font-size: 20px;
+      }
+      @include screen_tablet {
+        font-size: 22px;
+      }
+    }
     &__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
       &__card {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        padding: 16px;
-        background: white;
+        gap: 12px;
+        padding: 24px;
         border-radius: 1rem;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
         &:hover {
-          transform: scale(1.02);
-          box-shadow: var(--card-hover-shadow);
+          transform: scale(1);
+          box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 6px,
+            rgba(0, 0, 0, 0.1) 0px 1px 3px;
         }
         &__header {
           display: flex;
@@ -139,7 +155,7 @@
         &__title {
           font-family: var(--title-font);
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 600;
           @include screen_tiny {
             font-size: 18px;
           }
@@ -150,6 +166,26 @@
             font-size: 24px;
           }
         }
+        &__type,
+        &__skills {
+          font-family: var(--body-font);
+          font-size: 14px;
+          @include screen_tiny {
+            font-size: 16px;
+          }
+          @include screen_mobile {
+            font-size: 18px;
+          }
+          @include screen_tablet {
+            font-size: 20px;
+          }
+        }
+        &__type {
+          font-weight: 500;
+        }
+        &__skills {
+          font-weight: 400;
+        }
         &__list {
           list-style: none;
           padding: 0;
@@ -158,10 +194,21 @@
             padding-left: 1.5rem;
             font-family: var(--body-font);
             font-weight: 400;
+            font-family: var(--title-font);
+            font-size: 14px;
+            @include screen_tiny {
+              font-size: 16px;
+            }
+            @include screen_mobile {
+              font-size: 18px;
+            }
+            @include screen_tablet {
+              font-size: 20px;
+            }
           }
         }
         &:hover {
-          transform: translateY(-5px);
+          transform: translateY(-10px);
         }
       }
     }
