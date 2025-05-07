@@ -35,6 +35,7 @@ const traduction = {
         title: "MES PROJETS",
         description:
           "Voici quelques projets sur lesquels j'ai travaillé. Vous pouvez les consulter sur mon GitHub.",
+        filtersTitle: "Filtre des projets par technologie",
         allCategory: "Tous",
         categories: [
           {
@@ -240,6 +241,7 @@ const traduction = {
         title: "MY PROJECTS",
         description:
           "Here are some projects I have worked on. You can check them out on my GitHub.",
+        filtersTitle: "Filter projects by technology",
         allCategory: "All",
         categories: [
           {
