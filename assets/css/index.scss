@@ -266,10 +266,13 @@ table {
         }
       }
     }
-    &__skills {
+    &__degrees {
       &__grid {
         &__card {
           background: var(--background-light);
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          }
           &__header {
             i {
               color: #4b5563;
@@ -379,7 +382,7 @@ table {
         }
       }
     }
-    &__skills {
+    &__degrees {
       &__grid {
         &__card {
           background: var(--background-dark);

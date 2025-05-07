@@ -2,10 +2,14 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Développeur Front-end junior à Montréal – Valentin Debliqui</title>
+    <title>VDebliqui</title>
+    <meta
+      name="title"
+      content="Développeur Front-end à Montréal – Valentin Debliqui"
+    />
     <meta
       name="description"
-      content="Portfolio de Valentin Debliqui, développeur front-end junior basé à Montréal (QC, Canada), spécialisé en intégration web HTML, CSS, JavaScript. Disponible pour des projets freelance ou un contrat permanent."
+      content="Portfolio de Valentin Debliqui, développeur front-end basé à Montréal (QC, Canada), spécialisé en intégration web HTML, CSS, JavaScript. Disponible pour des projets freelance ou un contrat permanent."
     />
     <link
       rel="icon"
@@ -19,7 +23,7 @@
     <meta property="og:url" content="https://debliqui.github.io/VDebliqui/" />
     <meta
       property="og:title"
-      content="Développeur Front-end junior à Montréal – Valentin Debliqui"
+      content="Développeur Front-end à Montréal – Valentin Debliqui"
     />
     <meta
       property="og:description"
@@ -87,6 +91,7 @@
       itemType="http://schema.org/Person"
       data-main-label
     >
+      <!-- Banner section -->
       <section class="banner" aria-label="Introduction">
         <header class="banner__header" aria-label="Information profile">
           <h2 class="banner__header__title" itemprop="name" data-title>
@@ -155,6 +160,7 @@
           </picture>
         </div>
       </section>
+      <!-- About section -->
       <section
         class="section-container bg-darken"
         aria-label="Section à propos"
@@ -170,16 +176,18 @@
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__about">
           <p class="catchphrase" data-about-catchphrase>
-            Développeur front-end junior, je suis spécialisé dans l’intégration
-            Web
+            Développeur front-end, je suis spécialisé dans l’intégration Web
           </p>
           <ul
             class="section-container__about__listSpecialtie"
             aria-label="Liste des spécialités"
             data-about-specialties
-          ></ul>
+          >
+            <!-- Specialities list inject in Js -->
+          </ul>
         </div>
       </section>
+      <!-- Projects section -->
       <section
         class="section-container"
         aria-label="Section mes projets"
@@ -201,36 +209,42 @@
             class="section-container__projects__filter"
             aria-label="Filtre des projets par technologie"
             data-projects-filter
-          ></div>
-          <div class="section-container__projects__grid" data-projects></div>
+          >
+            <!-- Filter inject in Js -->
+          </div>
+          <div class="section-container__projects__grid" data-projects>
+            <!-- Projects card list inject in Js -->
+          </div>
         </div>
       </section>
+      <!-- Degrees section -->
       <section
         class="section-container bg-darken"
-        aria-label="Section mes compétences"
-        data-skills-section
+        aria-label="Section mes diplômes"
+        data-degrees-section
       >
-        <h2
-          class="section-container__title"
-          aria-label="Mes compétences"
-          data-skills-title
-        >
-          COMPÉTENCES
-        </h2>
+        <h2 class="section-container__title" data-degrees-title>DIPLÔMES</h2>
         <hr class="separator" aria-hidden="true" />
-        <div class="section-container__skills">
-          <p class="catchphrase" data-skills-catchphrase>
-            Créer des expériences web performantes, accessibles et élégantes est
-            au cœur de ma démarche.
-          </p>
-          <div
-            class="section-container__skills__grid"
-            aria-label="Liste des compétences"
-            data-skills-card-grid
-          ></div>
+        <p class="catchphrase" data-degrees-catchphrase>
+          Mon parcours m'a conduit d'employé polyvalent à assistant de
+          direction, renforçant ma rigueur et mon sens de l'organisation. Mon
+          expérience de menuisier a cultivé ma créativité et mon souci du
+          détail.
+        </p>
+        <div class="section-container__degrees">
+          <h3
+            class="section-container__degrees__title"
+            data-degrees-card-grid-title
+          >
+            Mes diplômes, moteurs de mon parcours :
+          </h3>
+          <div class="section-container__degrees__grid" data-degrees-card-grid>
+            <!-- Degrees list inject in Js -->
+          </div>
         </div>
       </section>
     </main>
+    <!-- Footer -->
     <footer class="footer" aria-label="Liens utiles" data-footer-label>
       <p aria-label="Copyright">VDebliqui ©2025</p>
       <div
