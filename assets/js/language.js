@@ -84,10 +84,35 @@ function updateContent(lang) {
   document.querySelector("[data-project-title]").textContent =
     content.section.project.title
 
+  /**
+   * Add category id to url
+   * @param {string} id
+   */
+  function applyFilterIdInUrl(id) {
+    const params = new URLSearchParams(location.search)
+
+    if (id === "all") {
+      // Removes 'flt' parameter from URL for "all"
+      params.delete("flt")
+    } else {
+      params.set("flt", id)
+    }
+
+    const newUrl =
+      params.toString().length > 0
+        ? `${location.pathname}?${params.toString()}`
+        : location.pathname
+
+    history.replaceState(null, "", newUrl)
+  }
+
   // Project filter
   const filterContainer = document.querySelector("[data-projects-filter]")
-
+  filterContainer.setAttribute("title", content.section.project.filtersTitle)
+  let currentId =
+    new URLSearchParams(window.location.search).get("flt") || "all"
   filterContainer.innerHTML = ""
+
   const allCategoriesBtn = document.createElement("button")
   allCategoriesBtn.setAttribute("data-category-id", "all")
   allCategoriesBtn.classList.add(
@@ -98,7 +123,7 @@ function updateContent(lang) {
   filterContainer.appendChild(allCategoriesBtn)
 
   const categoriesList = content.section.project.categories
-  categoriesList.map((category) => {
+  categoriesList.forEach((category) => {
     const categoryBtn = document.createElement("button")
     categoryBtn.setAttribute("data-category-id", category.categoryId)
     categoryBtn.classList.add("section-container__projects__filter__btn")
@@ -106,38 +131,43 @@ function updateContent(lang) {
     filterContainer.appendChild(categoryBtn)
   })
 
-  //Addition of an interactive filter that displays or hides cards according to the selected category and updates their visual status
+  // Adds the filter category to the URL and updates the style of the selected buttons.
   document
     .querySelectorAll(".section-container__projects__filter__btn")
     .forEach((filterBtn) => {
       filterBtn.addEventListener("click", () => {
         const categoryId = filterBtn.dataset.categoryId
-        const projectsCard = document.querySelectorAll(".project-card")
+
+        applyFilterIdInUrl(categoryId)
+        generateProjectCard()
 
         document
           .querySelectorAll(".section-container__projects__filter__btn")
           .forEach((btn) => btn.classList.remove("selected"))
 
         filterBtn.classList.add("selected")
-
-        projectsCard.forEach((projectCard) => {
-          if (
-            projectCard.dataset.categoryId === categoryId ||
-            categoryId === "all"
-          ) {
-            projectCard.style.display = ""
-          } else {
-            projectCard.style.display = "none"
-            projectCard.setAttribute("visibily", "hidden")
-          }
-        })
       })
     })
 
-  // Project Card
-  projectSection.innerHTML = ""
-  projects.forEach((project) => {
-    const projectCard = `
+  generateProjectCard()
+
+  // Generate project Card
+  function generateProjectCard() {
+    const params = new URLSearchParams(window.location.search)
+    const currentId = params.get("flt") || "all"
+    document
+      .querySelectorAll(".section-container__projects__filter__btn")
+      .forEach((btn) => {
+        btn.classList.toggle("selected", btn.dataset.categoryId === currentId)
+      }) // Initialise selected button
+    projectSection.innerHTML = ""
+    const filteredProjects =
+      currentId === "all"
+        ? projects
+        : projects.filter((project) => project.categoryId === currentId)
+
+    filteredProjects.forEach((project) => {
+      const projectCard = `
         <div class="project-card" data-category-id="${project.categoryId}">
             <article class="card" aria-label="${
               content.section.project.label.projectLabel
@@ -147,8 +177,8 @@ function updateContent(lang) {
                 <p class="card__content__objectif" aria-label="${
                   content.section.project.label.objectifLabel
                 }"><span aria-hidden="true">${
-      content.section.project.label.objectifLabel
-    } : </span>${project.objectif}</p>
+        content.section.project.label.objectifLabel
+      } : </span>${project.objectif}</p>
                  <ul class="card__content__language" aria-label="${
                    content.section.project.label.langTitle
                  }">
@@ -163,8 +193,8 @@ function updateContent(lang) {
               <button class="card__img-container" data-project-id="${
                 project.id
               }" aria-label="${content.section.project.label.detailsLabel} ${
-      project.name
-    }">
+        project.name
+      }">
                 <img
                   src="${project.src}"
                   alt="Demo ${project.name}"
@@ -181,14 +211,19 @@ function updateContent(lang) {
           <a href="${
             project.linkGit
           }" target="_blank" class="github-link" aria-label="${
-      content.section.project.label.linkGitLabel
-    } ${project.name}">
+        content.section.project.label.linkGitLabel
+      } ${project.name}">
               <i class="fa-brands fa-github"></i>
             </a>
           </article>
         </div>
     `
-    projectSection.innerHTML += projectCard
+      projectSection.innerHTML += projectCard
+    })
+  }
+
+  window.addEventListener("popstate", () => {
+    generateProjectCard()
   })
 
   // Project modal
