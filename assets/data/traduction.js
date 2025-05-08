@@ -86,7 +86,6 @@ const traduction = {
               "Dans ce projet, j'ai dû intégrer une maquette Figma en utilisant JavaScript pour un affichage dynamique des différents projets, avec la possibilité de filtrer les travaux par catégories, ainsi qu'un mode administrateur permettant de modifier et d'ajouter des travaux via une modal après avoir rempli un formulaire d'authentification.",
             objectif: "Maîtrise de JavaScript",
             language: ["HTML", "CSS", "JavaScript"],
-            link: "https://debliqui.github.io/Portfolio-architecte-sophie-bluel_Projet_6/",
             linkGit:
               "https://github.com/Debliqui/Portfolio-architecte-sophie-bluel_Projet_6",
             src: "assets/image/projects/demo_Sophie-Bluel.webp",
@@ -288,7 +287,6 @@ const traduction = {
               "In this project, I had to integrate a Figma model using JavaScript for a dynamic display of the various projects, with the possibility of filtering jobs by category, as well as an administrator mode allowing jobs to be modified and added via a modal after filling in an authentication form.",
             objectif: "Mastery of JavaScript",
             language: ["HTML", "CSS", "JavaScript"],
-            link: "https://debliqui.github.io/Portfolio-architecte-sophie-bluel_Projet_6/",
             linkGit:
               "https://github.com/Debliqui/Portfolio-architecte-sophie-bluel_Projet_6",
             src: "assets/image/projects/demo_Sophie-Bluel.webp",
