@@ -170,7 +170,7 @@ function updateContent(lang) {
                 <h3 class="card__content__name">${project.name}</h3>
                 <p class="card__content__objectif" aria-label="${
                   content.section.project.label.objectifLabel
-                }"><span aria-hidden="true">${
+                }"><span>${
         content.section.project.label.objectifLabel
       } : </span>${project.objectif}</p>
                  <ul class="card__content__language" aria-label="${
