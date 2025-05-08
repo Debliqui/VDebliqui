@@ -160,30 +160,28 @@
         aria-label="Section à propos"
         data-about-section
       >
-        <h2
-          class="section-container__title"
-          aria-label="À propos"
-          data-about-title
-        >
-          À PROPOS
-        </h2>
+        <h2 class="section-container__title" data-about-title>À PROPOS</h2>
         <hr class="separator" aria-hidden="true" />
+        <p class="catchphrase" data-about-catchphrase>
+          <em>Développeur web</em>, je vise à créer des expériences alliant
+          <em>performance</em>, <em>responsivité</em>,
+          <em>accessibilité numérique (a11y)</em> et une structure bien pensée.
+        </p>
         <div class="section-container__about">
-          <p class="catchphrase" data-about-catchphrase>
-            Développeur front-end, je suis spécialisé dans l’intégration Web:
-          </p>
+          <h3
+            class="section-container__about__listTitle"
+            id="title-list"
+            data-about-titleList
+          >
+            Mes spécialisations :
+          </h3>
           <ul
             class="section-container__about__listSpecialtie"
-            aria-label="Liste des spécialités"
+            aria-labelledby="title-list"
             data-about-specialties
           >
             <!-- Specialities list inject in Js -->
           </ul>
-          <p class="catchphrase" data-about-catchphrase-2>
-            Créer des expériences web alliant performance, responsivité,
-            accessibilité numérique (a11y) et une structure bien pensée, c’est
-            ainsi que je conçois le web.
-          </p>
         </div>
       </section>
       <!-- Projects section -->
@@ -192,13 +190,7 @@
         aria-label="Section mes projets"
         data-projects-section
       >
-        <h2
-          class="section-container__title"
-          aria-label="Mes projets"
-          data-project-title
-        >
-          MES PROJETS
-        </h2>
+        <h2 class="section-container__title" data-project-title>MES PROJETS</h2>
         <hr class="separator" aria-hidden="true" />
         <div class="section-container__projects">
           <p class="catchphrase" data-projects-catchphrase>

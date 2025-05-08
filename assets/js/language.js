@@ -44,7 +44,7 @@ function updateContent(lang) {
   document.querySelector("[data-job]").textContent = bannerSection.job
   document.querySelector("[data-location]").textContent = bannerSection.location
   document.querySelector("[data-statu]").textContent = bannerSection.statu
-  const subscribeBtn = document
+  document
     .querySelectorAll("[data-contact-btn]")
     .forEach((button) => (button.textContent = bannerSection.subscribe))
 
@@ -55,15 +55,13 @@ function updateContent(lang) {
     .setAttribute("aria-label", aboutSection.sectionLabel)
   const aboutSectionTitle = document.querySelector("[data-about-title]")
   aboutSectionTitle.textContent = aboutSection.title
-  aboutSectionTitle.setAttribute("aria-label", aboutSection.title)
-  document.querySelector("[data-about-catchphrase]").textContent =
+  document.querySelector("[data-about-catchphrase]").innerHTML =
     aboutSection.catchphrase
-  document.querySelector("[data-about-catchphrase-2]").textContent =
-    aboutSection.catchphrase2
+  document.querySelector("[data-about-titleList]").textContent =
+    aboutSection.titleList
   const specialtiesList = document.querySelector("[data-about-specialties]")
   if (specialtiesList) {
     specialtiesList.innerHTML = ""
-    specialtiesList.setAttribute("aria-label", aboutSection.listLabel)
     aboutSection.listSpecialties.forEach((specialty) => {
       const listItem = document.createElement("li")
       listItem.textContent = specialty
