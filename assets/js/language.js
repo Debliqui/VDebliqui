@@ -57,7 +57,8 @@ function updateContent(lang) {
   aboutSectionTitle.setAttribute("aria-label", aboutSection.title)
   document.querySelector("[data-about-catchphrase]").textContent =
     aboutSection.catchphrase
-
+  document.querySelector("[data-about-catchphrase-2]").textContent =
+    aboutSection.catchphrase2
   const specialtiesList = document.querySelector("[data-about-specialties]")
   if (specialtiesList) {
     specialtiesList.innerHTML = ""
