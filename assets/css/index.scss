@@ -244,6 +244,9 @@ table {
   }
 
   .section-container {
+    &__about {
+      background: var(--background-light);
+    }
     &__projects {
       &__filter {
         &__btn {
@@ -367,6 +370,9 @@ table {
   }
 
   .section-container {
+    &__about {
+      background: var(--background-dark);
+    }
     &__projects {
       &__filter {
         &__btn {

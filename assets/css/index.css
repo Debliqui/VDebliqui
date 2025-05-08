@@ -185,6 +185,9 @@
 
 .section-container {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section-container__title {
   font-family: var(--title-font);
@@ -211,11 +214,29 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.section-container__about__listTitle {
+  font-family: var(--title-font);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
 }
 @media screen and (min-width: 400px) {
-  .section-container__about {
-    align-items: center;
+  .section-container__about__listTitle {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-container__about__listTitle {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-container__about__listTitle {
+    font-size: 22px;
   }
 }
 .section-container__about__listSpecialtie {
@@ -241,10 +262,14 @@
     font-size: 19px;
   }
 }
+.section-container__about__listSpecialtie li {
+  padding: 2px;
+}
 .section-container__projects {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .section-container__projects__filter {
   display: flex;
@@ -307,6 +332,9 @@
   .section-container__projects__filter, .section-container__projects__grid {
     margin-top: 2.5rem;
   }
+}
+.section-container__degrees {
+  width: 100%;
 }
 .section-container__degrees__title {
   font-family: var(--title-font);
@@ -453,12 +481,16 @@
 @media screen and (min-width: 768px) {
   .catchphrase {
     font-size: 18px;
+    width: 80%;
   }
 }
 @media screen and (min-width: 1024px) {
   .catchphrase {
     font-size: 20px;
   }
+}
+.catchphrase em {
+  font-weight: 600;
 }
 
 .project-card {
@@ -1357,6 +1389,9 @@ table {
 [data-theme=light] .main-content {
   background-color: var(--main-light);
 }
+[data-theme=light] .section-container__about {
+  background: var(--background-light);
+}
 [data-theme=light] .section-container__projects__filter__btn {
   background-color: var(--background-light);
   color: var(--color-light);
@@ -1451,6 +1486,9 @@ table {
 }
 [data-theme=dark] .main-content {
   background-color: var(--main-dark);
+}
+[data-theme=dark] .section-container__about {
+  background: var(--background-dark);
 }
 [data-theme=dark] .section-container__projects__filter__btn {
   background-color: var(--color-dark);

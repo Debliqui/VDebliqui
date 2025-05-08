@@ -17,6 +17,9 @@
 
 .section-container {
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
     font-family: var(--title-font);
     font-size: 16px;
@@ -36,9 +39,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    @include screen_tiny {
-      align-items: center;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    &__listTitle {
+      font-family: var(--title-font);
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      @include screen_tiny {
+        font-size: 18px;
+      }
+      @include screen_mobile {
+        font-size: 20px;
+      }
+      @include screen_tablet {
+        font-size: 22px;
+      }
     }
     &__listSpecialtie {
       padding-left: 1.5rem;
@@ -56,12 +73,16 @@
       @include screen_tablet {
         font-size: 19px;
       }
+      & li {
+        padding: 2px;
+      }
     }
   }
   &__projects {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     &__filter {
       display: flex;
       margin-top: 1rem;
@@ -114,6 +135,7 @@
   }
 
   &__degrees {
+    width: 100%;
     &__title {
       font-family: var(--title-font);
       font-size: 16px;
@@ -233,8 +255,12 @@
   }
   @include screen_mobile {
     font-size: 18px;
+    width: 80%;
   }
   @include screen_tablet {
     font-size: 20px;
+  }
+  & em {
+    font-weight: 600;
   }
 }

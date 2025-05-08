@@ -16,8 +16,8 @@ const traduction = {
         sectionLabel: "Section à propos",
         title: "À PROPOS",
         catchphrase:
-          "Développeur front-end ,je suis spécialisé dans l’intégration Web:",
-        listLabel: "Liste des spécialités",
+          "<em>Développeur web</em>, je vise à créer des expériences alliant <em>performance</em>, <em>responsivité</em>, <em>accessibilité numérique (a11y)</em> et une structure bien pensée.",
+        titleList: "Mes spécialisations :",
         listSpecialties: [
           "Framework réactif,",
           "Page statique,",
@@ -25,8 +25,6 @@ const traduction = {
           "Utilisation et conception d’API Rest,",
           "Travail collaboratif (Scrum & Git).",
         ],
-        catchphrase2:
-          "Créer des expériences web alliant performance, responsivité, accessibilité numérique (a11y) et une structure bien pensée, c’est ainsi que je conçois le web.",
       },
       project: {
         sectionLabel: "Section mes projets",
@@ -135,8 +133,8 @@ const traduction = {
         frameworkLabel: "Frameworks",
         frameworkListLabel: "Liste des frameworks & libraries",
         catchphrase:
-          "Mon parcours m'a conduit d'employé polyvalent à assistant de direction, renforçant ma rigueur et mon sens de l'organisation. Mon expérience de menuisier a cultivé ma créativité et mon souci du détail.",
-        gridLabel: "Mes diplômes, moteurs de mon parcours :",
+          "Mon parcours m'a conduit d'employé polyvalent à assistant de direction renforçant ma rigueur et mon sens de l'organisation puis intégrateur Web maintenant. Mon expérience de menuisier a cultivé ma créativité et mon souci du détail.",
+        gridLabel: "Mes diplômes, moteurs de mon parcours",
         article: [
           {
             icon: '<i class="fa-solid fa-laptop"></i>',
@@ -175,9 +173,9 @@ const traduction = {
             skillsLabel: "Ce que ce diplôme m’a apporté :",
             list: [
               "Adaptabilité & gestion du stress",
-              "Esprit du service clientele",
-              "Communication et travail d’équipe",
-              "Discipline et rigueur dans l'exécution",
+              "Esprit du service clientèle",
+              "Communication et travail d&rsquo;équipe",
+              "Discipline et rigueur dans l&rsquo;exécution",
             ],
           },
         ],
@@ -218,8 +216,9 @@ const traduction = {
       about: {
         sectionLabel: "About section",
         title: "ABOUT",
-        catchphrase: "Front-end developer specializing in Web integration:",
-        listLabel: "List of specialties",
+        catchphrase:
+          "<em>As a web developer</em>, I aim to create experiences that combine <em>performance</em>, <em>responsiveness</em>, <em>digital accessibility (a11y)</em> and a well-thought-out structure.",
+        titleList: "My specializations :",
         listSpecialties: [
           "Reactive framework,",
           "Static page,",
@@ -227,8 +226,6 @@ const traduction = {
           "API Rest use and design,",
           "Collaborative work (Scrum & Git).",
         ],
-        catchphrase2:
-          "Creating web experiences that combine performance, responsiveness, digital accessibility (a11y) and a well thought-out structure, that's how I see the web.",
       },
       project: {
         sectionLabel: "My projects section",
@@ -337,7 +334,7 @@ const traduction = {
         frameworkListLabel: "List of frameworks & libraries",
         catchphrase:
           "My career path has taken me from multi-skilled employee to executive assistant, reinforcing my rigor and organizational skills. My experience as a carpenter has cultivated my creativity and attention to detail.",
-        gridLabel: "My degrees, the driving force behind my career :",
+        gridLabel: "My degrees, the driving force behind my career",
         article: [
           {
             icon: '<i class="fa-solid fa-laptop"></i>',
@@ -347,7 +344,7 @@ const traduction = {
             listLabel: "List of benefits",
             skillsLabel: "What this degree has done for me :",
             list: [
-              "Mastering basic Web languages",
+              "Mastering Web languages",
               "Collaborative work & clean code",
               "Respect for specifications",
               "Sense of digital accessibility and responsive",
