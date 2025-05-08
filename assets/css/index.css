@@ -644,8 +644,7 @@
 .footer {
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   gap: 16px;
@@ -653,6 +652,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer {
+    justify-content: center;
     padding-top: 20px;
   }
 }
