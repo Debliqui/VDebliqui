@@ -16,7 +16,7 @@ const traduction = {
         sectionLabel: "Section à propos",
         title: "À PROPOS",
         catchphrase:
-          "<em>Développeur web</em>, je vise à créer des expériences alliant <em>performance</em>, <em>responsivité</em>, <em>accessibilité numérique (a11y)</em> et une structure bien pensée.",
+          "<em>Développeur web</em>, je vise à créer une <em>qualité web</em> alliant <em>performance</em>, <em>responsivité</em>, <em>accessibilité numérique (a11y)</em> et une structure bien pensée.",
         titleList: "Mes spécialisations :",
         listSpecialties: [
           "Framework réactif,",
@@ -217,7 +217,7 @@ const traduction = {
         sectionLabel: "About section",
         title: "ABOUT",
         catchphrase:
-          "<em>As a web developer</em>, I aim to create experiences that combine <em>performance</em>, <em>responsiveness</em>, <em>digital accessibility (a11y)</em> and a well-thought-out structure.",
+          "<em>As a web developer</em>, I aim to create <em>web quality</em> that combine <em>performance</em>, <em>responsiveness</em>, <em>digital accessibility (a11y)</em> and a well-thought-out structure.",
         titleList: "My specializations :",
         listSpecialties: [
           "Reactive framework,",
