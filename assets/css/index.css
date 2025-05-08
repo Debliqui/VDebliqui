@@ -332,9 +332,14 @@
 }
 .section-container__degrees__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+}
+@media screen and (min-width: 400px) {
+  .section-container__degrees__grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 .section-container__degrees__grid__card {
   display: flex;
