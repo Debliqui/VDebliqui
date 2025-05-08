@@ -1,13 +1,15 @@
 const dialog = document.querySelector("[data-dialog-label]")
 const dialogClose = document.querySelector("[data-close-btn]")
-const contactBtn = document.querySelector("[data-contact-btn]")
+const contactBtn = document.querySelectorAll("[data-contact-btn]")
 const copyBtn = document.querySelector("[data-copy-btn]")
 const dataEmail = document.querySelector("[data-email]")
 const copyMessage = document.querySelector("[data-copy-message]")
 
-contactBtn.addEventListener("click", () => {
-  dialog.showModal()
-})
+contactBtn.forEach((button) =>
+  button.addEventListener("click", () => {
+    dialog.showModal()
+  })
+)
 
 dialogClose.addEventListener("click", () => {
   dialog.close()

@@ -27,8 +27,8 @@ function updateContent(lang) {
   document
     .querySelector("[data-header-label]")
     .setAttribute("aria-label", content.headerLablel)
-  const selectEl = document.querySelector("[data-switch-lang]")
-  selectEl.title = content.selectTitle
+  document.querySelector("[data-switch-lang-title]").textContent =
+    content.selectTitle
   document
     .querySelector("[data-theme-label]")
     .setAttribute("aria-label", content.themeLabel)
@@ -46,12 +46,6 @@ function updateContent(lang) {
   document.querySelector("[data-statu]").textContent = bannerSection.statu
   const subscribeBtn = document.querySelector("[data-contact-btn]")
   subscribeBtn.textContent = bannerSection.subscribe
-  subscribeBtn.setAttribute("aria-label", bannerSection.subscribeLabel)
-  document
-    .querySelector("[data-profil-picture]")
-    .setAttribute("alt", bannerSection.altPictureProfile)
-  const backgroundElement = document.querySelector("[data-background-src]")
-  backgroundElement.setAttribute("alt", bannerSection.altPictureBackground)
 
   // Update about section
   const aboutSection = content.section.about
@@ -197,7 +191,7 @@ function updateContent(lang) {
       }">
                 <img
                   src="${project.src}"
-                  alt="Demo ${project.name}"
+                  alt=""
                   class="card__img-container__picture"
                   width="300" height="200"
                   loading="lazy"
@@ -390,15 +384,8 @@ function updateContent(lang) {
     .querySelector("[data-footer-label]")
     .setAttribute("aria-label", content.footer.footerLabel)
   document
-    .querySelectorAll("[data-list-link]")
-    .forEach((element) =>
-      element.setAttribute("aria-label", content.footer.listLabel)
-    )
-  document
-    .querySelectorAll("[data-linkedin-label]")
-    .forEach((element) =>
-      element.setAttribute("aria-label", content.footer.linkedinLabel)
-    )
+    .querySelectorAll("[data-list-link-title")
+    .forEach((element) => (element.textContent = content.footer.listLabel))
   document
     .querySelectorAll("[data-linkedin-label-span]")
     .forEach((element) => (element.textContent = content.footer.linkedinLabel))
@@ -415,24 +402,20 @@ function updateContent(lang) {
   document
     .querySelector("[data-dialog-label]")
     .setAttribute("aria-label", content.contact.dialogLabel)
-  const closeBtn = document.querySelectorAll("[data-close-btn]")
-  closeBtn.forEach((btn) => {
-    btn.setAttribute("aria-label", content.contact.closeLabel)
+  const closeBtnLabel = document.querySelectorAll("[data-close-btn-label]")
+  closeBtnLabel.forEach((btn) => {
+    btn.textContent = content.contact.closeLabel
   })
   document.querySelector("[data-dialog-subtitle]").innerHTML =
     content.contact.subtitle
   const dialogDesc = document.querySelector("[data-dialog-description]")
   dialogDesc.textContent = content.contact.description
   dialogDesc.setAttribute("aria-label", content.contact.descriptionLabel)
-  document
-    .querySelector("[data-copy-btn]")
-    .setAttribute("aria-label", content.contact.copyBtnLabel)
   const copyBtnContent = document.querySelector("[data-copy-btn-content]")
   copyBtnContent.setAttribute("aria-label", content.contact.copyBtn)
   copyBtnContent.textContent = content.contact.copyBtn
-  document
-    .querySelector("[data-mail-btn]")
-    .setAttribute("aria-label", content.contact.mailBtnLabel)
+  document.querySelector("[data-mail-btn]").textContent =
+    content.contact.mailBtnLabel
   document
     .querySelector("[data-copy-message]")
     .setAttribute("aria-label", content.contact.copyMessageLabel)

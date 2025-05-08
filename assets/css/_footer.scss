@@ -18,7 +18,8 @@
 .footer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   padding-top: 16px;
   @include screen_mobile {
@@ -30,9 +31,24 @@
   @include screen_tablet {
     padding-top: 32px;
   }
+  &__cta {
+    width: 60px;
+    height: 6px;
+    margin-bottom: 8px;
+    @include screen_mobile {
+      width: 80px;
+    }
+    @include screen_mobile {
+      width: 100px;
+    }
+    @include screen_tablet {
+      width: 120px;
+    }
+  }
   & p {
     font-family: var(--body-font);
     font-size: 14px;
+    font-weight: 500;
     @include screen_tiny {
       font-size: 16px;
     }
@@ -52,15 +68,20 @@
       gap: 10px;
     }
     &__item {
-      font-size: 20px;
-      @include screen_tiny {
-        font-size: 22px;
+      &:hover {
+        scale: 1.05;
       }
-      @include screen_mobile {
-        font-size: 24px;
-      }
-      @include screen_tablet {
-        font-size: 26px;
+      &__link {
+        font-size: 20px;
+        @include screen_tiny {
+          font-size: 22px;
+        }
+        @include screen_mobile {
+          font-size: 24px;
+        }
+        @include screen_tablet {
+          font-size: 26px;
+        }
       }
     }
   }
