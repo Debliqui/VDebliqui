@@ -16,15 +16,17 @@ const traduction = {
         sectionLabel: "Section à propos",
         title: "À PROPOS",
         catchphrase:
-          "Développeur front-end ,je suis spécialisé dans l’intégration Web",
+          "Développeur front-end ,je suis spécialisé dans l’intégration Web:",
         listLabel: "Liste des spécialités",
         listSpecialties: [
-          "Page dynamique,",
+          "Framework réactif,",
           "Page statique,",
-          "Utilisation d’API Rest,",
-          "Déboguer et optimiser un site web existant,",
-          "Gestion d'état pour applications web.",
+          "Optimisation SEO et performance,",
+          "Utilisation et conception d’API Rest,",
+          "Travail collaboratif (Scrum & Git).",
         ],
+        catchphrase2:
+          "Créer des expériences web alliant performance, responsivité, accessibilité numérique (a11y) et une structure bien pensée, c’est ainsi que je conçois le web.",
       },
       project: {
         sectionLabel: "Section mes projets",
@@ -217,15 +219,17 @@ const traduction = {
       about: {
         sectionLabel: "About section",
         title: "ABOUT",
-        catchphrase: "Front-end developer specializing in Web integration",
+        catchphrase: "Front-end developer specializing in Web integration:",
         listLabel: "List of specialties",
         listSpecialties: [
-          "Dynamic pages,",
-          "Static pages,",
-          "Using Rest APIs,",
-          "Debugging and optimizing an existing website,",
-          "State management for web applications.",
+          "Reactive framework,",
+          "Static page,",
+          "SEO optimization and performance,",
+          "API Rest use and design,",
+          "Collaborative work (Scrum & Git).",
         ],
+        catchphrase2:
+          "Creating web experiences that combine performance, responsiveness, digital accessibility (a11y) and a well thought-out structure, that's how I see the web.",
       },
       project: {
         sectionLabel: "My projects section",
