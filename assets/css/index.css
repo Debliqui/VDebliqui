@@ -607,9 +607,11 @@
 .footer {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   position: relative;
+  gap: 16px;
   padding-top: 16px;
 }
 @media screen and (min-width: 768px) {
@@ -628,23 +630,27 @@
   }
 }
 .footer__cta {
-  width: 60px;
-  height: 6px;
-  margin-bottom: 8px;
+  padding: 4px 6px;
+  font-family: var(--title-font);
+  font-size: 12px;
+  font-weight: 600;
+  height: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 400px) {
   .footer__cta {
-    width: 80px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 768px) {
   .footer__cta {
-    width: 100px;
+    font-size: 16px;
+    padding: 6px 8px;
   }
 }
 @media screen and (min-width: 1024px) {
   .footer__cta {
-    width: 120px;
+    font-size: 18px;
+    padding: 8px 10px;
   }
 }
 .footer p {
@@ -671,6 +677,7 @@
   position: absolute;
   right: 0;
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 @media screen and (min-width: 768px) {
@@ -1318,23 +1325,11 @@ table {
     color: var(--color-dark);
     background-color: var(--background-dark);
   }
-  button {
-    background-color: var(--button-dark);
-  }
-  button:hover {
-    border-color: var(--border-dark);
-  }
 }
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--color-light);
     background-color: var(--background-light);
-  }
-  button {
-    background-color: var(--button-light);
-  }
-  button:hover {
-    border-color: var(--border-light);
   }
 }
 [data-theme=light] {
@@ -1407,6 +1402,10 @@ table {
 }
 [data-theme=light] .project-card {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+[data-theme=light] .footer__cta {
+  background-color: var(--button-light);
+  color: var(--color-light);
 }
 [data-theme=light] .dialog {
   background-color: var(--background-light);
@@ -1496,6 +1495,10 @@ table {
 }
 [data-theme=dark] .project-card {
   box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 10px, rgba(0, 0, 0, 0.4) -1px -1px 4px inset;
+}
+[data-theme=dark] .footer__cta {
+  background-color: var(--button-dark);
+  color: var(--color-dark);
 }
 [data-theme=dark] .dialog {
   background-color: var(--bg-card-content-dark);

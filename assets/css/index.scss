@@ -208,14 +208,6 @@ table {
     color: var(--color-dark);
     background-color: var(--background-dark);
   }
-
-  button {
-    background-color: var(--button-dark);
-
-    &:hover {
-      border-color: var(--border-dark);
-    }
-  }
 }
 
 // Light mode styles
@@ -223,14 +215,6 @@ table {
   :root {
     color: var(--color-light);
     background-color: var(--background-light);
-  }
-
-  button {
-    background-color: var(--button-light);
-
-    &:hover {
-      border-color: var(--border-light);
-    }
   }
 }
 
@@ -328,6 +312,11 @@ table {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
+  .footer__cta {
+    background-color: var(--button-light);
+    color: var(--color-light);
+  }
+
   .dialog {
     background-color: var(--background-light);
     color: var(--color-light);
@@ -340,11 +329,13 @@ table {
       }
     }
   }
+
   [data-copy-message] {
     border: 1px solid var(--color-light);
     background-color: var(--bg-card-light);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   }
+
   .dialog-project__links__link {
     color: var(--color-dark);
     background-color: var(--button-secondary-light);
@@ -440,6 +431,11 @@ table {
   .project-card {
     box-shadow: rgba(0, 0, 0, 0.6) 4px 4px 10px,
       rgba(0, 0, 0, 0.4) -1px -1px 4px inset;
+  }
+
+  .footer__cta {
+    background-color: var(--button-dark);
+    color: var(--color-dark);
   }
 
   .dialog {

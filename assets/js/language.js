@@ -44,8 +44,9 @@ function updateContent(lang) {
   document.querySelector("[data-job]").textContent = bannerSection.job
   document.querySelector("[data-location]").textContent = bannerSection.location
   document.querySelector("[data-statu]").textContent = bannerSection.statu
-  const subscribeBtn = document.querySelector("[data-contact-btn]")
-  subscribeBtn.textContent = bannerSection.subscribe
+  const subscribeBtn = document
+    .querySelectorAll("[data-contact-btn]")
+    .forEach((button) => (button.textContent = bannerSection.subscribe))
 
   // Update about section
   const aboutSection = content.section.about

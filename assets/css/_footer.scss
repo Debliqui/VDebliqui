@@ -18,9 +18,11 @@
 .footer {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   position: relative;
+  gap: 16px;
   padding-top: 16px;
   @include screen_mobile {
     padding-top: 20px;
@@ -32,17 +34,21 @@
     padding-top: 32px;
   }
   &__cta {
-    width: 60px;
-    height: 6px;
-    margin-bottom: 8px;
-    @include screen_mobile {
-      width: 80px;
+    padding: 4px 6px;
+    font-family: var(--title-font);
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    @include screen_tiny {
+      font-size: 14px;
     }
     @include screen_mobile {
-      width: 100px;
+      font-size: 16px;
+      padding: 6px 8px;
     }
     @include screen_tablet {
-      width: 120px;
+      font-size: 18px;
+      padding: 8px 10px;
     }
   }
   & p {
@@ -63,6 +69,7 @@
     position: absolute;
     right: 0;
     display: flex;
+    align-items: center;
     gap: 8px;
     @include screen_mobile {
       gap: 10px;
