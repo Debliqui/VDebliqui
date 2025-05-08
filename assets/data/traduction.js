@@ -10,11 +10,7 @@ const traduction = {
         job: "Intégrateur Web",
         location: "Montréal, Québec, Canada",
         statu: "En recherche",
-        subscribeLabel: "Me contacter",
         subscribe: "Me contacter +",
-        altPictureProfile: "Photo de profile de Valentin Debliqui",
-        altPictureBackground:
-          "Lac gelé au pied d'une chaîne de montagnes enneigées",
       },
       about: {
         sectionLabel: "Section à propos",
@@ -199,7 +195,6 @@ const traduction = {
         "Envie d'en savoir plus ? </br> Envie que l'on collabore ensemble ?",
       description:
         "Contactez-moi, je vous répondrai dans les plus brefs délais !",
-      copyBtnLabel: "Cliquer pour copier l'email",
       copyBtn: "Cliquer pour copier",
       mailBtnLabel: "Redirection vers les mails",
       copyMessageLabel: "Confirmation de la copie",
@@ -217,11 +212,7 @@ const traduction = {
         job: "Web integrator",
         location: "Montreal, Quebec, Canada",
         statu: "Open to work",
-        subscribeLabel: "Contact me",
         subscribe: "Contact me +",
-        altPictureProfile: "Valentin Debliqui's profile photo",
-        altPictureBackground:
-          "View of the urban environment with a sunset in the background",
       },
       about: {
         sectionLabel: "About section",
@@ -402,7 +393,6 @@ const traduction = {
       closeLabel: "Close the window",
       subtitle: "Want to know more? </br> Want us to collaborate together?",
       description: "Contact me, I will reply as soon as possible!",
-      copyBtnLabel: "Click to copy email",
       copyBtn: "Click to copy",
       mailBtnLabel: "Redirect to emails",
       copyMessageLabel: "Copy confirmation",

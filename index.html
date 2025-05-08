@@ -65,11 +65,13 @@
       data-header-label
     >
       <h1 class="sr-only">Portfolio Valentin Debliqui</h1>
+      <label class="sr-only" for="language" data-switch-lang-title>
+        Choisissez votre langue
+      </label>
       <select
         id="language"
-        name="language"
         class="switchLanguage"
-        title="Choisissez votre langue"
+        aria-labelledby="language"
         data-switch-lang
       >
         <option value="fr">FR</option>
@@ -97,9 +99,9 @@
           <h2 class="banner__header__title" itemprop="name" data-title>
             Debliqui Valentin
           </h2>
-          <h3 class="banner__header__job" itemprop="jobTitle" data-job>
+          <p class="banner__header__job" itemprop="jobTitle" data-job>
             Intégrateur Web
-          </h3>
+          </p>
           <p class="banner__header__location" itemprop="address" data-location>
             Montréal, Québec, Canada
           </p>
@@ -120,17 +122,13 @@
           <div class="banner__middle__profilePicture" itemprop="image">
             <img
               src="./assets/image/profile-picture.webp"
-              alt="Photo de profile de Valentin Debliqui"
+              alt=""
               class="banner__middle__profilePicture__picture"
               loading="lazy"
               data-profil-picture
             />
           </div>
-          <button
-            class="banner__middle__contactBtn"
-            data-contact-btn
-            aria-label="Me contacter"
-          >
+          <button class="banner__middle__contactBtn" data-contact-btn>
             Me contacter +
           </button>
         </div>
@@ -152,7 +150,7 @@
             />
             <img
               src="./assets/image/background-light-366.webp"
-              alt="Lac gelé au pied d'une chaîne de montagnes enneigées"
+              alt=""
               class="banner__backgroundImg__src"
               fetchpriority="high"
               data-background-src
@@ -246,35 +244,41 @@
     </main>
     <!-- Footer -->
     <footer class="footer" aria-label="Liens utiles" data-footer-label>
-      <p aria-label="Copyright">VDebliqui ©2025</p>
-      <div
-        class="footer__list"
-        aria-label="Liste des liens utiles"
-        data-list-link
-      >
-        <a
-          href="https://github.com/Debliqui"
-          target="_blank"
-          class="footer__list__item"
-          aria-label="Visitez mon profil GitHub"
-          data-gitHub-label
-          ><i class="fa-brands fa-github"></i>
-          <span class="sr-only" data-gitHub-label-span
-            >Visitez mon profil GitHub</span
+      <button class="footer__cta" data-contact-btn>
+        <span class="sr-only">Me contacter +</span>
+      </button>
+      <p>VDebliqui ©2025</p>
+      <h2 class="sr-only" id="list-link-title" data-list-link-title>
+        Liste des liens utiles
+      </h2>
+      <ul class="footer__list" aria-labelledby="list-link-title" data-list-link>
+        <li class="footer__list__item">
+          <a
+            href="https://github.com/Debliqui"
+            target="_blank"
+            class="footer__list__item__link"
+            data-gitHub-label
           >
-        </a>
-        <a
-          href="https://www.linkedin.com/in/valentin-d-290332112/"
-          target="_blank"
-          class="footer__list__item"
-          aria-label="Visitez mon profil LinkedIn"
-          data-linkedin-label
-          ><i class="fa-brands fa-linkedin"></i>
-          <span class="sr-only" data-linkedin-label-span
-            >Visitez mon profil LinkedIn</span
+            <i class="fa-brands fa-github"></i>
+            <span class="sr-only" data-gitHub-label-span>
+              Visitez mon profil GitHub
+            </span>
+          </a>
+        </li>
+        <li class="footer__list__item">
+          <a
+            href="https://www.linkedin.com/in/valentin-d-290332112/"
+            target="_blank"
+            class="footer__list__item__link"
+            data-linkedin-label
           >
-        </a>
-      </div>
+            <i class="fa-brands fa-linkedin"></i>
+            <span class="sr-only" data-linkedin-label-span>
+              Visitez mon profil LinkedIn
+            </span>
+          </a>
+        </li>
+      </ul>
     </footer>
     <!-- Modal de contact -->
     <dialog
@@ -284,91 +288,96 @@
       itemscope
       itemtype="http://schema.org/Person"
     >
-      <button
-        class="dialog__closeBtn"
-        aria-label="Fermer la fenêtre"
-        data-close-btn
-      >
+      <button class="dialog__closeBtn" data-close-btn>
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        <span class="sr-only" data-close-btn-label>Fermer la fenêtre</span>
       </button>
-      <h2 class="dialog__title">CONTACT</h2>
-      <hr class="separator" aria-hidden="true" />
-      <h3 class="dialog__subtitle" data-dialog-subtitle>
-        Envie d'en savoir plus ? <br />
-        Envie que l'on collabore ensemble ?
-      </h3>
-      <p class="dialog__description" data-dialog-description>
-        Contactez-moi, je vous répondrai dans les plus brefs délais !
-      </p>
-      <p class="dialog__email" aria-label="email" data-email itemprop="email">
-        debliqui.valentin@outlook.com
-      </p>
-      <div class="dialog__contact">
-        <button
-          class="dialog__contact__copy-btn"
-          aria-label="Cliquer pour copier l'email"
-          data-copy-btn
-        >
-          <i class="fa-solid fa-copy" aria-hidden="true"></i>
-          <span
-            class="dialog__contact__copy-btn__content"
-            aria-hidden="true"
-            data-copy-btn-content
+      <div class="dialog__content">
+        <h2 class="dialog__title">CONTACT</h2>
+        <hr class="separator" aria-hidden="true" />
+        <h3 class="dialog__subtitle" data-dialog-subtitle>
+          Envie d'en savoir plus ?
+          <br />
+          Envie que l'on collabore ensemble ?
+        </h3>
+        <p class="dialog__description" data-dialog-description>
+          Contactez-moi, je vous répondrai dans les plus brefs délais !
+        </p>
+        <p class="dialog__email" data-email itemprop="email">
+          debliqui.valentin@outlook.com
+        </p>
+        <div class="dialog__contact">
+          <button class="dialog__contact__copy-btn" data-copy-btn>
+            <i class="fa-solid fa-copy" aria-hidden="true"></i>
+            <span
+              class="dialog__contact__copy-btn__content"
+              data-copy-btn-content
+            >
+              Cliquer pour copier
+            </span>
+          </button>
+          <a
+            href="mailto:debliqui.valentin@outlook.com"
+            class="dialog__contact__mail-btn"
           >
-            Cliquer pour copier</span
-          >
-        </button>
-        <a
-          href="mailto:debliqui.valentin@outlook.com"
-          aria-label="Redirection vers les mails"
-          class="dialog__contact__mail-btn"
-          data-mail-btn
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <span class="sr-only" data-mail-btn
+              >Redirection vers les mails</span
+            >
+          </a>
+        </div>
+        <h3
+          class="sr-only"
+          id="list-link-title-contact-modal"
+          data-list-link-title
         >
-          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-        </a>
+          Liste des liens utiles
+        </h3>
+        <ul
+          class="dialog__list"
+          aria-labelledby="list-link-title-contact-modal"
+          data-list-link
+        >
+          <li class="dialog__list__item">
+            <a
+              href="https://github.com/Debliqui"
+              target="_blank"
+              class="dialog__list__item__link"
+              data-gitHub-label
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span class="sr-only" data-gitHub-label-span>
+                Visitez mon profil GitHub
+              </span>
+            </a>
+          </li>
+          <li class="dialog__list__item">
+            <a
+              href="https://www.linkedin.com/in/valentin-d-290332112/"
+              target="_blank"
+              class="dialog__list__item__link"
+              data-linkedin-label
+            >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span class="sr-only" data-linkedin-label-span>
+                Visitez mon profil LinkedIn
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="copy-message"
+          aria-label="Confirmation de la copie"
+          aria-hidden="true"
+          role="alert"
+          data-copy-message
+        >
+          <i class="fa-solid fa-check"></i>
+          <span class="copy-message__content" data-copy-message-content>
+            Copié dans le presse-papiers
+          </span>
+        </p>
       </div>
-      <div
-        class="dialog__list"
-        aria-label="Liste des liens utiles"
-        data-list-link
-      >
-        <a
-          href="https://github.com/Debliqui"
-          target="_blank"
-          class="dialog__list__item"
-          aria-label="Visitez mon profil GitHub"
-          data-gitHub-label
-        >
-          <i class="fa-brands fa-github" aria-hidden="true"></i>
-          <span class="sr-only" data-gitHub-label-span
-            >Visitez mon profil GitHub</span
-          >
-        </a>
-        <a
-          href="https://www.linkedin.com/in/valentin-d-290332112/"
-          target="_blank"
-          class="dialog__list__item"
-          aria-label="Visitez mon profil LinkedIn"
-          data-linkedin-label
-        >
-          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          <span class="sr-only" data-linkedin-label-span
-            >Visitez mon profil LinkedIn</span
-          >
-        </a>
-      </div>
-      <p
-        class="copy-message"
-        aria-label="Confirmation de la copie"
-        aria-hidden="true"
-        role="alert"
-        data-copy-message
-      >
-        <i class="fa-solid fa-check"></i
-        ><span class="copy-message__content" data-copy-message-content>
-          Copié dans le presse-papiers
-        </span>
-      </p>
     </dialog>
 
     <!-- Modal project -->
@@ -377,36 +386,41 @@
       aria-label="Information du projet"
       data-project-dialog
     >
-      <button
-        class="dialog__closeBtn"
-        aria-label="Fermer la fenêtre"
-        data-close-btn
-      >
-        <i class="fa-solid fa-xmark"></i>
+      <button class="dialog__closeBtn" data-close-btn>
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        <span class="sr-only" data-close-btn-label>Fermer la fenêtre</span>
       </button>
-      <h2 class="dialog__title" data-project-dialog-title>Titre</h2>
-      <hr class="separator" aria-hidden="true" />
-      <h3 class="dialog__subtitle" data-project-dialog-subtitle>Sous-titre</h3>
-      <p class="dialog__description" data-project-dialog-description>
-        Description
-      </p>
-      <div class="dialog-project__demo-iframe" data-container-iframe-demo>
-        <span class="desktop-template" data-iframe-demo></span>
-      </div>
-      <div class="dialog-project__demo-video" data-conainer-video-demo=""></div>
-      <ul
-        class="card__content__language project-lang"
-        data-project-lang
-        aria-label=""
-      ></ul>
-      <div class="dialog-project__links">
-        <a
-          class="dialog-project__links__link"
-          href=""
-          target="_blank"
-          data-gitHub-repo
-          >GitHub</a
-        >
+      <div class="dialog__content">
+        <h2 class="dialog__title" data-project-dialog-title>Titre</h2>
+        <hr class="separator" aria-hidden="true" />
+        <h3 class="dialog__subtitle" data-project-dialog-subtitle>
+          Sous-titre
+        </h3>
+        <p class="dialog__description" data-project-dialog-description>
+          Description
+        </p>
+        <div class="dialog-project__demo-iframe" data-container-iframe-demo>
+          <span class="desktop-template" data-iframe-demo></span>
+        </div>
+        <div
+          class="dialog-project__demo-video"
+          data-conainer-video-demo=""
+        ></div>
+        <ul
+          class="card__content__language project-lang"
+          data-project-lang
+          aria-label=""
+        ></ul>
+        <div class="dialog-project__links">
+          <a
+            class="dialog-project__links__link"
+            href=""
+            target="_blank"
+            data-gitHub-repo
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </dialog>
   </body>
