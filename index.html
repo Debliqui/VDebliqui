@@ -9,7 +9,7 @@
     />
     <meta
       name="description"
-      content="Portfolio de Valentin Debliqui, développeur front-end basé à Montréal (QC, Canada), spécialisé en intégration web HTML, CSS, JavaScript. Disponible pour des projets freelance ou un contrat permanent."
+      content="Portfolio de Valentin Debliqui, développeur front-end basé à Montréal (QC, Canada), spécialisé en intégration web. Disponible pour des projets freelance ou un contrat permanent."
     />
     <link
       rel="icon"
@@ -27,7 +27,7 @@
     />
     <meta
       property="og:description"
-      content="Portfolio de Valentin Debliqui, spécialisé en intégration web HTML, CSS, JavaScript. Disponible pour missions freelance et contrat permanent à Montréal."
+      content="Portfolio de Valentin Debliqui, spécialisé en intégration web. Disponible pour missions freelance et contrat permanent à Montréal."
     />
     <meta
       property="og:image"
@@ -39,11 +39,18 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Valentin Debliqui",
-        "url": "https://debliqui.github.io/VDebliqui/",
-        "email": "debliqui.valentin@outlook.com",
-        "image": "./assets/image/profile-picture.webp"
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Valentin Debliqui",
+          "url": "https://debliqui.github.io/VDebliqui/",
+          "email": "debliqui.valentin@outlook.com",
+          "image": "https://debliqui.github.io/VDebliqui/assets/image/profile-picture.webp",
+          "sameAs": [
+            "https://www.linkedin.com/in/valentindebliqui",
+            "https://github.com/debliqui"
+          ]
+        }
       }
     </script>
     <script
@@ -98,8 +105,16 @@
           <p class="banner__header__job" itemprop="jobTitle" data-job>
             Intégrateur Web
           </p>
-          <p class="banner__header__location" itemprop="address" data-location>
-            Montréal, Québec, Canada
+          <p
+            class="banner__header__location"
+            itemprop="address"
+            itemscope
+            itemtype="https://schema.org/PostalAddress"
+            data-location
+          >
+            <span itemprop="addressLocality">Montréal</span>,
+            <span itemprop="addressRegion">Québec</span>,
+            <span itemprop="addressCountry">Canada</span>
           </p>
           <a
             href="https://www.linkedin.com/in/valentin-d-290332112/"
@@ -115,12 +130,13 @@
           </a>
         </header>
         <div class="banner__middle">
-          <div class="banner__middle__profilePicture" itemprop="image">
+          <div class="banner__middle__profilePicture">
             <img
               src="./assets/image/profile-picture.webp"
               alt=""
               class="banner__middle__profilePicture__picture"
               loading="lazy"
+              itemprop="image"
               data-profil-picture
             />
           </div>
@@ -279,8 +295,6 @@
       class="dialog"
       aria-label="Information de contact"
       data-dialog-label
-      itemscope
-      itemtype="http://schema.org/Person"
     >
       <button class="dialog__closeBtn" data-close-btn>
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
