@@ -7,7 +7,7 @@ const traduction = {
     section: {
       banner: {
         title: "Debliqui Valentin",
-        job: "Intégrateur Web",
+        job: "Développeur Front-end",
         location: "Montréal, Québec, Canada",
         statu: "En recherche",
         subscribe: "Me contacter +",
@@ -208,7 +208,7 @@ const traduction = {
     section: {
       banner: {
         title: "Debliqui Valentin",
-        job: "Web integrator",
+        job: "Front-end developer",
         location: "Montreal, Quebec, Canada",
         statu: "Open to work",
         subscribe: "Contact me +",
