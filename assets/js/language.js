@@ -29,9 +29,14 @@ function updateContent(lang) {
     .setAttribute("aria-label", content.headerLablel)
   document.querySelector("[data-switch-lang-title]").textContent =
     content.selectTitle
-  document
-    .querySelector("[data-theme-label]")
-    .setAttribute("aria-label", content.themeLabel)
+  // Update the content of the switchTheme button.
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark"
+  const themeLabel = document.querySelector("[data-theme-label]")
+  if (themeLabel) {
+    themeLabel.textContent = isDark
+      ? content.themeDarkLabel
+      : content.themeLightLabel
+  }
 
   // Update main content
   document

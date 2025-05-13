@@ -2,7 +2,8 @@ const traduction = {
   fr: {
     headerLablel: "Réglages du thème et de la langue",
     selectTitle: "Choisissez votre langue",
-    themeLabel: "Passer en mode sombre",
+    themeLightLabel: "Passer en mode sombre",
+    themeDarkLabel: "Passer en mode clair",
     mainLabel: "Contenu principal",
     section: {
       banner: {
@@ -203,7 +204,8 @@ const traduction = {
   en: {
     headerLablel: "Theme and language settings",
     selectTitle: "Choose your language",
-    themeLabel: "Switch to dark mode",
+    themeLightLabel: "Switch to dark mode",
+    themeDarkLabel: "Switch to light mode",
     mainLabel: "Main content",
     section: {
       banner: {
