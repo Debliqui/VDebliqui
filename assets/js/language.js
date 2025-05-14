@@ -219,6 +219,8 @@ function updateContent(lang) {
     `
       projectSection.innerHTML += projectCard
     })
+
+    setupProjectModal()
   }
 
   window.addEventListener("popstate", () => {
@@ -228,84 +230,87 @@ function updateContent(lang) {
   // Project modal
   const dialog = document.querySelector("[data-project-dialog]")
   dialog.setAttribute("aria-label", content.section.project.label.dialogLabel)
-  document.querySelectorAll("[data-project-id]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const projectId = btn.getAttribute("data-project-id")
-      const project = projects.find((p) => p.id === projectId)
+  function setupProjectModal() {
+    document.querySelectorAll("[data-project-id]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const projectId = btn.getAttribute("data-project-id")
+        const project = projects.find((p) => p.id === projectId)
 
-      if (project) {
-        document.querySelector("[data-project-dialog-title]").textContent =
-          project.name
+        if (project) {
+          document.querySelector("[data-project-dialog-title]").textContent =
+            project.name
 
-        const videoDemoContainer = document.querySelector(
-          "[data-conainer-video-demo]"
-        )
-        const iframeDemoContainer = document.querySelector(
-          "[data-container-iframe-demo]"
-        )
-        if (!project.mobileDemo) {
-          const demoDesktop = `
-          <video class="dialog-project__demo-video__src" controls muted playsinline src="${project.srcDemo}">
-            `
-          iframeDemoContainer.style.display = "none"
-          videoDemoContainer.style.display = "flex"
-          videoDemoContainer.innerHTML = demoDesktop
-        } else {
-          videoDemoContainer.style.display = "none"
-          iframeDemoContainer.style.display = "flex"
-          const iframeDemo = document.querySelector("[data-iframe-demo]")
-          const existingIframeDemo = document.querySelector(
-            "[data-iframe-content]"
+          const videoDemoContainer = document.querySelector(
+            "[data-conainer-video-demo]"
           )
-          if (existingIframeDemo) {
-            existingIframeDemo.remove()
-          }
-          const iframeContent = document.createElement("iframe")
-          iframeContent.setAttribute("src", project.link)
-          iframeContent.classList.add("desktop-template__iframe")
-          iframeContent.setAttribute("aria-label", project.name)
-          iframeContent.title = project.name
-          iframeContent.setAttribute("data-iframe-content", "")
-          iframeDemo.appendChild(iframeContent)
-        }
-
-        document.querySelector("[data-project-dialog-subtitle]").textContent =
-          project.subtitle
-        document.querySelector("[data-project-dialog-description]").innerHTML =
-          project.description
-        const projectLang = document.querySelector("[data-project-lang]")
-        projectLang.innerHTML = `
-        ${project.language
-          .map(
-            (language) =>
-              `<li class="card__content__language__tag">${language}</li>`
+          const iframeDemoContainer = document.querySelector(
+            "[data-container-iframe-demo]"
           )
-          .join("")}
-        `
-        projectLang.setAttribute(
-          "aria-label",
-          content.section.project.label.langTitle
-        )
-        const linkGitH = document.querySelector("[data-gitHub-repo]")
-        linkGitH.href = project.linkGit
-        if (project.link) {
-          const linkDemo = document.createElement("a")
-          linkDemo.textContent = content.section.project.label.linkDemoBtn
-          linkDemo.className = "dialog-project__links__link"
-          linkDemo.href = project.link
-          linkDemo.target = "_blank"
-          linkDemo.setAttribute("data-link-demo", "")
-          linkGitH.insertAdjacentElement("afterend", linkDemo)
-        } else {
-          const linkDemo = document.querySelector("[data-link-demo]")
-          if (linkDemo) {
-            clearData()
+          if (!project.mobileDemo) {
+            const demoDesktop = `
+            <video class="dialog-project__demo-video__src" controls muted playsinline src="${project.srcDemo}">
+              `
+            iframeDemoContainer.style.display = "none"
+            videoDemoContainer.style.display = "flex"
+            videoDemoContainer.innerHTML = demoDesktop
+          } else {
+            videoDemoContainer.style.display = "none"
+            iframeDemoContainer.style.display = "flex"
+            const iframeDemo = document.querySelector("[data-iframe-demo]")
+            const existingIframeDemo = document.querySelector(
+              "[data-iframe-content]"
+            )
+            if (existingIframeDemo) {
+              existingIframeDemo.remove()
+            }
+            const iframeContent = document.createElement("iframe")
+            iframeContent.setAttribute("src", project.link)
+            iframeContent.classList.add("desktop-template__iframe")
+            iframeContent.setAttribute("aria-label", project.name)
+            iframeContent.title = project.name
+            iframeContent.setAttribute("data-iframe-content", "")
+            iframeDemo.appendChild(iframeContent)
           }
+
+          document.querySelector("[data-project-dialog-subtitle]").textContent =
+            project.subtitle
+          document.querySelector(
+            "[data-project-dialog-description]"
+          ).innerHTML = project.description
+          const projectLang = document.querySelector("[data-project-lang]")
+          projectLang.innerHTML = `
+          ${project.language
+            .map(
+              (language) =>
+                `<li class="card__content__language__tag">${language}</li>`
+            )
+            .join("")}
+          `
+          projectLang.setAttribute(
+            "aria-label",
+            content.section.project.label.langTitle
+          )
+          const linkGitH = document.querySelector("[data-gitHub-repo]")
+          linkGitH.href = project.linkGit
+          if (project.link) {
+            const linkDemo = document.createElement("a")
+            linkDemo.textContent = content.section.project.label.linkDemoBtn
+            linkDemo.className = "dialog-project__links__link"
+            linkDemo.href = project.link
+            linkDemo.target = "_blank"
+            linkDemo.setAttribute("data-link-demo", "")
+            linkGitH.insertAdjacentElement("afterend", linkDemo)
+          } else {
+            const linkDemo = document.querySelector("[data-link-demo]")
+            if (linkDemo) {
+              clearData()
+            }
+          }
+          dialog.showModal()
         }
-        dialog.showModal()
-      }
+      })
     })
-  })
+  }
 
   document.querySelectorAll("[data-close-btn]").forEach((btn) => {
     btn.addEventListener("click", () => {
