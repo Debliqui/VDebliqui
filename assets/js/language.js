@@ -47,7 +47,6 @@ function updateContent(lang) {
   const bannerSection = content.section.banner
   document.querySelector("[data-title]").textContent = bannerSection.title
   document.querySelector("[data-job]").textContent = bannerSection.job
-  document.querySelector("[data-location]").textContent = bannerSection.location
   document.querySelector("[data-statu]").textContent = bannerSection.statu
   document
     .querySelectorAll("[data-contact-btn]")

@@ -9,7 +9,6 @@ const traduction = {
       banner: {
         title: "Debliqui Valentin",
         job: "Développeur Front-end",
-        location: "Montréal, Québec, Canada",
         statu: "En recherche",
         subscribe: "Me contacter +",
       },
@@ -211,7 +210,6 @@ const traduction = {
       banner: {
         title: "Debliqui Valentin",
         job: "Front-end developer",
-        location: "Montreal, Quebec, Canada",
         statu: "Open to work",
         subscribe: "Contact me +",
       },
